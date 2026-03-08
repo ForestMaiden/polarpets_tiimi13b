@@ -1,0 +1,66 @@
+/* ----- EXTRAORDINARY FONTS ------
+
+----- HEADINGS / SPLASHY -----
+
+CSS
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+
+.changa-one {
+  font-family: "Changa One", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;} normal OR italic
+
+HTML
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Knewave' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Sigmar' rel='stylesheet'>
+OR
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+</style> 
+
+Changa One
+Designed by Eduardo Tunni
+License
+Copyright (c) 2011, Eduardo Tunni (http://www.tipo.net.ar), with Reserved Font Name "Changa"
+This Font Software is licensed under the SIL Open Font License, Version 1.1 .
+
+----- WHOLE WEBSITE / NEUTRAL -----
+CSS
+HTML
+
+
+
+----- SIGNATURE / "HANDWRITING" -----
+
+CSS
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+
+.birthstone {
+  font-family: "Birthstone", cursive;
+  font-weight: 400;
+  font-style: normal;}
+
+HTML
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=My Soul' rel='stylesheet'> 
+<link href='https://fonts.googleapis.com/css?family=Sarina' rel='stylesheet'>
+OR
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+</style>
+
+Birthstone
+Designed by Robert Leuschke
+License
+Copyright 2019 The Birthstone Project Authors (https://github.com/googlefonts/birthstone)
+This Font Software is licensed under the SIL Open Font License, Version 1.1 .
+
+*/

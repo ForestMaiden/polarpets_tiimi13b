@@ -1,0 +1,59 @@
+/* --- BASIC RESET AND FONT PREFERENCE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* --- MAIN PAGE LAYOUT MOBILE FIRST (GRID) --- */
+body {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+    gap: 10px;          /* Visually separates the elements */
+    min-height: 100vh;  /* Full viewport height */
+}
+
+/* --- Between layout --- */
+@media (min-width: px) {
+    nav,
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20px;
+        list-style: none;
+    }
+}
+
+/* --- BETTER LAYOUT FOR BIGGER SCREENS (Watch and use when it isn't too crowded) --- */
+@media (min-width: px) {
+body {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+    gap: 10px;
+    min-height: 100vh;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    list-style: none;
+}
+}
