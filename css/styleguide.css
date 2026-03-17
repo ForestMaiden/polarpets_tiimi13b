@@ -1,0 +1,238 @@
+/* -----------------------------------
+   POLAR PETS - STYLE GUIDE
+   Visual direction: Aurora-inspired, desaturated, 
+   professional, trustworthy, calm caring
+   ----------------------------------- */
+
+/* TODO: värit, elementit (pohja Claudelta), testaus, hienosäätö  */
+
+
+/* --- CSS VARIABLES (COLORS) --- */
+:root {
+    /* Primary palette - Aurora inspired */
+    --color-primary: #7B9FAB;        /* Soft teal (aurora accent) */
+    --color-secondary: #C8D5D9;      /* Light ice blue */
+    --color-accent: #9FB8C3;         /* Muted aurora glow */
+    
+    /* Neutrals - Desaturated, professional */
+    --color-bg-light: #F5F7F8;       /* Very light grey background */
+    --color-bg-white: #FFFFFF;       /* Pure white for cards */
+    --color-text-dark: #2C3E50;      /* Dark grey for headings */
+    --color-text-body: #4A5F73;      /* Medium grey for body text */
+    --color-text-light: #7A8A99;     /* Light grey for subtle text */
+    
+    /* Functional colors */
+    --color-border: #D4DDE1;         /* Subtle borders */
+    --color-shadow: rgba(0,0,0,0.08); /* Soft shadows */
+    --color-hover: #6A8A96;          /* Slightly darker on hover */
+}
+
+/* --- TYPOGRAPHY --- */
+
+.logo {
+    font-family: "Stylish", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-primary);
+}
+
+/* Headings - Roboto Bold/ExtraBold for hierarchy */
+h1 {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 800; /* ExtraBold */
+    font-size: 2.5rem; /* 40px */
+    color: var(--color-text-dark);
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 2rem; /* 32px */
+    color: var(--color-text-dark);
+    line-height: 1.3;
+}
+
+h3 {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem; /* 24px */
+    color: var(--color-text-dark);
+    line-height: 1.4;
+}
+
+h4 {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 500; /* Medium */
+    font-size: 1.25rem; /* 20px */
+    color: var(--color-text-body);
+    line-height: 1.4;
+}
+
+/* Body text - Roboto Regular/Light for readability */
+p {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 1rem; /* 16px */
+    color: var(--color-text-body);
+    line-height: 1.6;
+}
+
+.text-light {
+    font-weight: 300; /* Light for less emphasis */
+    color: var(--color-text-light);
+}
+
+
+/* --- ELEMENTS --- */
+
+.nav {
+    background-color: var(--color-bg-white);
+    border-bottom: 1px solid var(--color-border);
+    padding: 1rem 2rem;
+}
+/* Use: Main site navigation bar. Keep links simple, use --color-primary for active state. */
+
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-hover);
+}
+/* Use: Main CTA buttons (book appointment, contact us). */
+
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 4px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+/* Use: Secondary actions (learn more, view details). */
+
+
+.card {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px var(--color-shadow);
+}
+/* Use: Service descriptions, staff profiles, testimonials. Keep content clean and spacious. */
+
+
+.info-box {
+    background-color: var(--color-secondary);
+    border-left: 4px solid var(--color-primary);
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+/* Use: Important notices, opening hours, special announcements. */
+
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--color-text-body);
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+/* Use: Contact forms, booking forms. Keep labels clear and above inputs. */
+
+.footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-bg-light);
+    padding: 2rem;
+    text-align: center;
+}
+/* Use: Site footer with contact info, social links, copyright. Light text on dark background. */
+
+
+/* --- FONTS ---
+
+LOGO: Stylish
+-------------
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+
+.stylish-regular {
+  font-family: "Stylish", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+Designed by AsiaSoft Inc
+
+License
+Copyright (c) 1992-2018 AsiaSoft Inc. Seoul Korea All Rights Reserved.
+This Font Software is licensed under the SIL Open Font License, Version 1.1 . 
+This license is available with a FAQ at: https://openfontlicense.org
+
+
+OTSIKKO sekä TEKSTI: Roboto
+---------------------------
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.roboto-<uniquifier> {
+  font-family: "Roboto", Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+Designed by Christian Robertson, ParaType, Font Bureau
+
+License
+Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)
+This Font Software is licensed under the SIL Open Font License, Version 1.1 . 
+This license is available with a FAQ at: https://openfontlicense.org
+
+*/
