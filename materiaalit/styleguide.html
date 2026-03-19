@@ -123,19 +123,22 @@
                 background-color: var(--polar-accent);
                 color: var(--color-primary);
                 padding: 0.5rem 1.5rem;
-                border: none;
-                border-radius: 5px;
+                border: 2px solid var(--polar-accent);
+                border-radius: 7.5px;
                 font-family: "Roboto", Helvetica, Arial, sans-serif;
                 font-weight: 500;
                 text-decoration: none;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
                 width: fit-content;
+                position: relative;
+                overflow: hidden;
             }
             .btn-primary:hover,
             .btn-primary:focus {
                 background-color: var(--pets-a-glow);
                 color: var(--polar-white);
+                transform: scale(1.025);
             }
             /* Käytä toissijaisiin asioihin (Lue lisää, tms.) */
             .btn-secondary {
@@ -144,18 +147,21 @@
                 color: var(--color-primary);
                 padding: 0.5rem 1.5rem;
                 border: 2px solid var(--polar-secondary);
-                border-radius: 5px;
+                border-radius: 7.5px;
                 font-family: "Roboto", Helvetica, Arial, sans-serif;
                 font-weight: 400;
                 text-decoration: none;
                 cursor: pointer;
-                transition: all 0.3s ease;
+                transition: background-color 0.3s ease;
                 width: fit-content;
+                position: relative;
+                overflow: hidden;
             }
             .btn-secondary:hover,
-            .btn-primary:focus {
-                background-color: var(--pets-s-glow);
+            .btn-secondary:focus {
+                background-color: transparent;
                 color: var(--polar-primary);
+                box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
             }
             /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
             .card {
@@ -302,7 +308,7 @@
             <h2>Navigaatio (Navbar)</h2>
             
             <nav class="navbar navbar-expand-lg navbar-dark" 
-            style="background-color: var(--polar-primary); border-radius: 5px 5px 0px 0px;">
+            style="background-color: var(--polar-primary); border-radius: 0px 0px 5px 5px;">
                 <div class="container-fluid">
                     <!-- Logo -->
                     <a class="navbar-brand" href="index.html">🟢 Polar Pets</a>
@@ -322,7 +328,7 @@
                             <li class="nav-item"><a class="nav-link" href="#">Yhteystiedot</a></li>
                         </ul>
                     </div>
-                    <!-- CTA Button (shows on desktop, hides on mobile) -->
+                    <!-- CTA Button (shows on desktop, hides on mobile). Tämä näkyisi: btn-primary ms-lg-3-->
                     <a href="#ajanvaraus" class="btn-primary d-none d-lg-inline-block ms-3">Varaa aika</a>
                 </div>
             </nav>
