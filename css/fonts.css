@@ -1,0 +1,59 @@
+/* --- FONTS ---
+
+LOGO: Stylish
+-------------
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+
+.stylish-regular {
+  font-family: "Stylish", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+Designed by AsiaSoft Inc
+
+License
+Copyright (c) 1992-2018 AsiaSoft Inc. Seoul Korea All Rights Reserved.
+This Font Software is licensed under the SIL Open Font License, Version 1.1 . 
+This license is available with a FAQ at: https://openfontlicense.org
+
+
+OTSIKKO sekä TEKSTI: Roboto
+---------------------------
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.roboto-<uniquifier> {
+  font-family: "Roboto", Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+Designed by Christian Robertson, ParaType, Font Bureau
+
+License
+Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)
+This Font Software is licensed under the SIL Open Font License, Version 1.1 . 
+This license is available with a FAQ at: https://openfontlicense.org
+
+*/
