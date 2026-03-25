@@ -111,7 +111,7 @@ p {
 
 */
 
-/* --- BUTTONS --- */                                       /* MUOKKAA HOHTAVIKSI */
+/* --- BUTTONS --- */
 /* Käytä CTA:han (Varaa aika) */
 .btn-primary {
     display: inline-block;
@@ -201,12 +201,70 @@ p {
 /* Käytä samaa tummaa footeria vaalealla tekstillä kaikilla sivuillamme
    MUISTA laittaa <p class="footer", että teksti toimii kuten pitää. */
 .footer {
-    grid-area: footer;
     background-color: var(--polar-primary);
     color: var(--polar-light);
-    padding: 1.5rem;
-    border-radius: 5px 5px 0px 0px;
+    padding: 1rem;
+    border-radius: 5px 5px 0 0;
     margin-top: 2rem;
+}
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "logo contact hours"
+        "copyright copyright copyright";
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Assign each section to its grid area */
+.footer-logo {
+    grid-area: logo;
+}
+.footer-contact {
+    grid-area: contact;
+}
+.footer-opening-hours {
+    grid-area: hours;
+}
+.footer-copyright {
+    grid-area: copyright;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--pets-s-glow);
+}
+
+.footer h4 {
+    color: var(--polar-light);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.footer a {
+    color: var(--polar-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer a:hover,
+.footer a:focus {
+    box-shadow: 0 0 15px var(--polar-secondary), 0 0 30px var(--pets-s-glow);
+}
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+.footer dl {
+    margin: 0;
+}
+.footer dt {
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+.footer dd {
+    margin: 0 0 0.5rem 0;
 }
 
 /* --- OTHER IMPORTANT ELEMENTS --- */
@@ -270,7 +328,7 @@ tr :nth-child(4) {
 }
 
 
-/* --- MAIN PAGE LAYOUT MOBILE FIRST (GRID) --- */
+/* --- MOBILE FIRST LAYOUT --- */
 /*body {
     display: grid;
     grid-template-areas:
@@ -282,7 +340,33 @@ tr :nth-child(4) {
     background-color: var(--polar-light);
 }
 */
-/* --- BETTER LAYOUT FOR BIGGER SCREENS (Watch and use when it isn't too crowded) --- */
+@media (max-width: 576px) {
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logo"
+            "contact"
+            "hours"
+            "copyright";
+        gap: 1.5rem;
+    }
+    .footer-copyright {
+        padding-top: 0.5rem;
+    }
+}
+
+/* --- BETWEEN LAYOUT --- */
+@media (max-width: 991px) {
+    .footer-wrapper {
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        grid-template-areas:
+            "logo contact"
+            "empty hours"
+            "copyright copyright";
+    }
+}
+
+/* --- BETTER LAYOUT FOR BIGGER SCREENS --- */
 /*@media (min-width: 992px) {
 body {
     display: grid;

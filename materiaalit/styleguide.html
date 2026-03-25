@@ -198,14 +198,72 @@
                 outline: none;
                 border-color: var(--color-primary);
             }
-            /* Käytä samaa tummaa footeria vaalealla tekstillä kaikilla sivuillamme
-               MUISTA laittaa <p class="footer", että teksti toimii kuten pitää. */
+            /* Käytä samaa footeria kaikilla sivuillamme*/
             .footer {
                 background-color: var(--polar-primary);
                 color: var(--polar-light);
-                padding: 1.5rem;
-                border-radius: 5px 5px 0px 0px;
+                padding: 1rem;
+                border-radius: 5px 5px 0 0;
                 margin-top: 2rem;
+            }
+            .footer-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas:
+                    "logo contact hours"
+                    "copyright copyright copyright";
+                gap: 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            /* Assign each section to its grid area */
+            .footer-logo {
+                grid-area: logo;
+            }
+            .footer-contact {
+                grid-area: contact;
+            }
+            .footer-opening-hours {
+                grid-area: hours;
+            }
+            .footer-copyright {
+                grid-area: copyright;
+                text-align: center;
+                padding-top: 1rem;
+                border-top: 1px solid var(--pets-s-glow);
+            }
+
+            .footer h4 {
+                color: var(--polar-light);
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+            }
+            .footer a {
+                color: var(--polar-secondary);
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+            .footer a:hover,
+            .footer a:focus {
+                box-shadow: 0 0 15px var(--polar-secondary), 0 0 30px var(--pets-s-glow);
+            }
+            .footer ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .footer ul li {
+                margin-bottom: 0.5rem;
+            }
+            .footer dl {
+                margin: 0;
+            }
+            .footer dt {
+                font-weight: 500;
+                margin-top: 0.5rem;
+            }
+            .footer dd {
+                margin: 0 0 0.5rem 0;
             }
             /* --- STYLE GUIDE SECTIONS --- (Ei ole osa meidän tyyliä) */
             .color-swatch {
@@ -406,13 +464,37 @@
         <section class="component-section">
             <h2>Footer</h2>
             
-            <div class="footer">
-                <h4 style="color: var(--polar-light); margin-top: 0;">Polar Pets</h4>
-                <p style="color: var(--polar-light); margin-bottom: 0.5rem;">Tampereen eläinklinikka ja -hoitola</p>
-                <p style="color: var(--polar-light); margin-bottom: 0.5rem;">📍 Katu 123, 90100 Tampere</p>
-                <p style="color: var(--polar-light); margin-bottom: 0.5rem;">📞 Ajanvaraus: 010 123 4567 | Päivystys: 044 123 4567</p>
-                <p style="color: var(--polar-light); margin-bottom: 0;"><small>Ma–Pe 8–18, La 9–14 | Päivystys 24/7</small></p>
-            </div>
+            <footer class="footer">
+                <div class="footer-wrapper">
+                    <div class="footer-logo">
+                        <img src="images/" alt="">
+                    </div>
+                    <div class="footer-contact">
+                        <address>
+                            <h4>Polar Pets -eläinklinikka</h4>
+                            <ul>
+                                <li>Keksitty osoite</li>
+                                <li><a href="tel:+358401234567">📞 044 123 4567</a></li>
+                                <li><a href="mailto:info@polarpets.fi">info@polarpets.fi</a></li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="footer-opening-hours">
+                        <h4>Aukioloajat</h4>
+                            <dl>
+                                <dt>Ma-Pe</dt>
+                                <dd>09:00 - 17:00</dd>
+                                <dt>Lauantai</dt>
+                                <dd>09:00 - 16:00</dd>
+                                <dt>Sunnuntai</dt>
+                                <dd>10:00 - 15:00</dd>
+                            </dl>
+                    </div>
+                    <div class="footer-copyright">
+                        <small>Polar Pets  |  Copyright 2026</small>
+                    </div>
+                </div>
+            </footer>
 
             <p class="usage-note">Käyttö: Yhtenäinen footer kaikilla sivuilla. Yhteystiedot, aukioloajat, päivystysnumero.</p>
         </section>
