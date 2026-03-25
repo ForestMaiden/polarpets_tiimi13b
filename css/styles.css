@@ -258,13 +258,18 @@ p {
 }
 .footer dl {
     margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;    /* Label takes what it needs, time fills rest */
+    gap: 0.5rem 1rem;                   /* vertical horizontal */
 }
 .footer dt {
     font-weight: 500;
     margin-top: 0.5rem;
+    text-align: left;
 }
 .footer dd {
-    margin: 0 0 0.5rem 0;
+    margin-top: 0.5rem;
+    text-align: left;
 }
 
 /* --- OTHER IMPORTANT ELEMENTS --- */
@@ -340,14 +345,14 @@ tr :nth-child(4) {
     background-color: var(--polar-light);
 }
 */
-@media (max-width: 576px) {
+@media (max-width: 460px) {
     .footer-wrapper {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         grid-template-areas:
             "logo"
-            "contact"
             "hours"
-            "copyright";
+            "contact"
+            "copyright" !important;
         gap: 1.5rem;
     }
     .footer-copyright {
@@ -356,12 +361,12 @@ tr :nth-child(4) {
 }
 
 /* --- BETWEEN LAYOUT --- */
-@media (max-width: 991px) {
+@media (max-width: 720px) {
     .footer-wrapper {
         grid-template-columns: 1fr 1fr; /* Two columns */
         grid-template-areas:
-            "logo contact"
-            "empty hours"
+            "logo hours"
+            "empty contact"
             "copyright copyright";
     }
 }
