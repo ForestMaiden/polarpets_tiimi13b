@@ -129,8 +129,9 @@ p {
 }
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: var(--pets-a-glow);
-    color: var(--polar-white);
+    background-color: var(--polar-accent);
+    color: var(--polar-primary);
+    box-shadow: 0 0 15px var(--pets-a-glow), 0 0 30px var(--pets-a-glow);
 }
 /* Käytä toissijaisiin asioihin (Lue lisää, tms.) */
 .btn-secondary {
@@ -149,8 +150,9 @@ p {
 }
 .btn-secondary:hover,
 .btn-primary:focus {
-    background-color: var(--pets-s-glow);
+    background-color: transparent;
     color: var(--polar-primary);
+    box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
 }
 
 /* --- CARD | INFO-BOX | FORM --- */
@@ -166,6 +168,9 @@ p {
     padding: 1.5rem;
     box-shadow: 0 2px 5px var(--pets-shadow);
     margin-bottom: 1.5rem;
+}
+.service-card{
+
 }
 /* Vaihtoehto kortille. Korostettu tieto, aukioloajat, päivystystiedot, yms. */
 .info-box {
