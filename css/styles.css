@@ -102,6 +102,15 @@ p {
     z-index: 1000; /* Ensures it stays above other content */
 }
 
+/* --- ALERT --- straight to HTML, because it's Bootstrap element like the navbar
+
+<div class="alert alert-info alert-dismissible fade show m-0 text-center" role="alert">
+    <strong>📞 Päivystys 24/7:</strong> 044 123 4567
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+*/
+
 /* --- BUTTONS --- */                                       /* MUOKKAA HOHTAVIKSI */
 /* Käytä CTA:han (Varaa aika) */
 .btn-primary {
@@ -143,8 +152,13 @@ p {
     background-color: var(--pets-s-glow);
     color: var(--polar-primary);
 }
+
+/* --- CARD | INFO-BOX | FORM --- */
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
 .card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
     width: 300px;
     background-color: var(--polar-white);
     border: 2px solid var(--pets-border);
@@ -161,7 +175,7 @@ p {
     border-radius: 5px;
     margin: 1rem 0;
 }
-/* Yhteydenottolomake, Yhteydenottolomake, ajanvarauspyyntö. Kentät selkeät ja helppolukuiset. */
+/* Käytä: Yhteydenottolomake, ajanvarauspyyntö. Kentät selkeät ja helppolukuiset. */
 .form-input {
     width: 100%;
     padding: 0.75rem;
@@ -177,9 +191,12 @@ p {
     outline: none;
     border-color: var(--color-primary);
 }
+
+/* --- FOOTER --- */
 /* Käytä samaa tummaa footeria vaalealla tekstillä kaikilla sivuillamme
    MUISTA laittaa <p class="footer", että teksti toimii kuten pitää. */
 .footer {
+    grid-area: footer;
     background-color: var(--polar-primary);
     color: var(--polar-light);
     padding: 1.5rem;
@@ -187,45 +204,101 @@ p {
     margin-top: 2rem;
 }
 
+/* --- OTHER IMPORTANT ELEMENTS --- */
+header {
+    grid-area: header;
+    padding: 4rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.hero {
+    padding: 4rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+    background-image: url("images/....png") no-repeat;
+    background-size: cover;
+}
+
+main {
+    grid-area: main;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+section {
+    grid-area: section;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+/* --- TABLE --- */
+/* Hinnastoa varten */
+table {
+    table-layout: fixed;
+    width: 90%;
+    margin: 10px auto;
+    border-collapse: collapse;
+    border: none;
+}
+thead {
+    background-color: var(--polar-secondary);
+}
+tbody tr:nth-child(odd) {       /* 2n+1 ("odd"=parittomat), 2n (parilliset) */
+    background-color: var(--pets-s-glow);
+}
+tbody tr:nth-child(even) {       /* 2n+1 ("odd"=parittomat), 2n ("even"=parilliset) */
+    background-color: var(--polar-light);
+}
+caption {
+    padding: 1em;
+    background: var(--polar-light);
+    font-size: 1rem;
+    caption-side: top;
+}
+th,
+td {
+    vertical-align: top;
+    padding: 0.3em;
+}
+tr :nth-child(1),
+tr :nth-child(2),
+tr :nth-child(4) {
+  text-align: center;
+  width: 11%;
+}
+
 
 /* --- MAIN PAGE LAYOUT MOBILE FIRST (GRID) --- */
 body {
-    margin: 1rem;
     display: grid;
     grid-template-areas:
-    "header"
     "nav"
-    "hero"
+    "header"            /* landing page would include "hero" ??? */
     "main"
     "section"
     "footer";
     gap: 10px;          /* Visually separates the elements */
     min-height: 100vh;  /* Full viewport height */
-}
-
-/* --- Between layout --- */
-@media (min-width: px) {
-    nav,
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 20px;
-        list-style: none;
-    }
+    background-color: var(--polar-light);
 }
 
 /* --- BETTER LAYOUT FOR BIGGER SCREENS (Watch and use when it isn't too crowded) --- */
-@media (min-width: px) {
+@media (min-width: 992px) {
 body {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-areas:
+    "nav nav nav"
     "header header header"
-    "nav main aside"
+    "main main main"
+    "section section section"
     "footer footer footer";
     gap: 10px;
     min-height: 100vh;
+    background-color: var(--polar-light);
 }
 }
