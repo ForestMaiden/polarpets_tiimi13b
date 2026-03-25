@@ -155,7 +155,7 @@ p {
 
 /* --- CARD | INFO-BOX | FORM --- */
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
-.card {
+.main-card {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
@@ -205,12 +205,6 @@ p {
 }
 
 /* --- OTHER IMPORTANT ELEMENTS --- */
-header {
-    grid-area: header;
-    padding: 4rem;
-    border-radius: 5px;
-    margin-top: 2rem;
-}
 
 .hero {
     padding: 4rem;
@@ -272,28 +266,24 @@ tr :nth-child(4) {
 
 
 /* --- MAIN PAGE LAYOUT MOBILE FIRST (GRID) --- */
-body {
+/*body {
     display: grid;
     grid-template-areas:
-    "nav"
-    "header"            /* landing page would include "hero" ??? */
     "main"
     "section"
     "footer";
-    gap: 10px;          /* Visually separates the elements */
-    min-height: 100vh;  /* Full viewport height */
+    gap: 10px;
+    min-height: 100vh;
     background-color: var(--polar-light);
 }
-
+*/
 /* --- BETTER LAYOUT FOR BIGGER SCREENS (Watch and use when it isn't too crowded) --- */
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
 body {
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto auto 1fr auto auto;
     grid-template-areas:
-    "nav nav nav"
-    "header header header"
     "main main main"
     "section section section"
     "footer footer footer";
