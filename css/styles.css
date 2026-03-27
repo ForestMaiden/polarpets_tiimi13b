@@ -13,6 +13,24 @@
     box-sizing: border-box;
 }
 
+/* --- Bootstrap ONLY for specific components --- */
+
+/* Whitelist: Bootstrap works ONLY on these classes */
+.navbar,
+.navbar *,
+.carousel,
+.carousel *,
+.bootstrap-zone,
+.bootstrap-zone * {
+    /* Bootstrap styles allowed here */
+}
+
+/* Blacklist: Reset Bootstrap everywhere else */
+body > *:not(.bootstrap-zone) {
+    all: revert; /* Revert to browser defaults, ignore Bootstrap */
+}
+
+
 /* --- CSS VARIABLES --- */
 :root {
 /* Color palette - Aurora inspired */
@@ -111,7 +129,7 @@ p {
 
 */
 
-/* --- BUTTONS --- */                                       /* MUOKKAA HOHTAVIKSI */
+/* --- BUTTONS --- */
 /* Käytä CTA:han (Varaa aika) */
 .btn-primary {
     display: inline-block;
@@ -129,8 +147,9 @@ p {
 }
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: var(--pets-a-glow);
-    color: var(--polar-white);
+    background-color: var(--polar-accent);
+    color: var(--polar-primary);
+    box-shadow: 0 0 15px var(--pets-a-glow), 0 0 30px var(--pets-a-glow);
 }
 /* Käytä toissijaisiin asioihin (Lue lisää, tms.) */
 .btn-secondary {
@@ -149,13 +168,14 @@ p {
 }
 .btn-secondary:hover,
 .btn-primary:focus {
-    background-color: var(--pets-s-glow);
+    background-color: transparent;
     color: var(--polar-primary);
+    box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
 }
 
 /* --- CARD | INFO-BOX | FORM --- */
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
-.card {
+.main-card {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
@@ -166,6 +186,9 @@ p {
     padding: 1.5rem;
     box-shadow: 0 2px 5px var(--pets-shadow);
     margin-bottom: 1.5rem;
+}
+.service-card{
+
 }
 /* Vaihtoehto kortille. Korostettu tieto, aukioloajat, päivystystiedot, yms. */
 .info-box {
@@ -196,21 +219,78 @@ p {
 /* Käytä samaa tummaa footeria vaalealla tekstillä kaikilla sivuillamme
    MUISTA laittaa <p class="footer", että teksti toimii kuten pitää. */
 .footer {
-    grid-area: footer;
     background-color: var(--polar-primary);
     color: var(--polar-light);
-    padding: 1.5rem;
-    border-radius: 5px 5px 0px 0px;
+    padding: 1rem;
+    border-radius: 5px 5px 0 0;
     margin-top: 2rem;
+}
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "logo contact hours"
+        "copyright copyright copyright";
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Assign each section to its grid area */
+.footer-logo {
+    grid-area: logo;
+}
+.footer-contact {
+    grid-area: contact;
+}
+.footer-opening-hours {
+    grid-area: hours;
+}
+.footer-copyright {
+    grid-area: copyright;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--pets-s-glow);
+}
+
+.footer h4 {
+    color: var(--polar-light);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.footer a {
+    color: var(--polar-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer a:hover,
+.footer a:focus {
+    box-shadow: 0 0 15px var(--polar-secondary), 0 0 30px var(--pets-s-glow);
+}
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+.footer dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;    /* Label takes what it needs, time fills rest */
+    gap: 0.5rem 1rem;                   /* vertical horizontal */
+}
+.footer dt {
+    font-weight: 500;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+.footer dd {
+    margin-top: 0.5rem;
+    text-align: left;
 }
 
 /* --- OTHER IMPORTANT ELEMENTS --- */
-header {
-    grid-area: header;
-    padding: 4rem;
-    border-radius: 5px;
-    margin-top: 2rem;
-}
 
 .hero {
     padding: 4rem;
@@ -271,29 +351,51 @@ tr :nth-child(4) {
 }
 
 
-/* --- MAIN PAGE LAYOUT MOBILE FIRST (GRID) --- */
-body {
+/* --- MOBILE FIRST LAYOUT --- */
+/*body {
     display: grid;
     grid-template-areas:
-    "nav"
-    "header"            /* landing page would include "hero" ??? */
     "main"
     "section"
     "footer";
-    gap: 10px;          /* Visually separates the elements */
-    min-height: 100vh;  /* Full viewport height */
+    gap: 10px;
+    min-height: 100vh;
     background-color: var(--polar-light);
 }
+*/
+@media (max-width: 460px) {
+    .footer-wrapper {
+        grid-template-columns: 1fr !important;
+        grid-template-areas:
+            "logo"
+            "hours"
+            "contact"
+            "copyright" !important;
+        gap: 1.5rem;
+    }
+    .footer-copyright {
+        padding-top: 0.5rem;
+    }
+}
 
-/* --- BETTER LAYOUT FOR BIGGER SCREENS (Watch and use when it isn't too crowded) --- */
-@media (min-width: 992px) {
+/* --- BETWEEN LAYOUT --- */
+@media (max-width: 720px) {
+    .footer-wrapper {
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        grid-template-areas:
+            "logo hours"
+            "empty contact"
+            "copyright copyright";
+    }
+}
+
+/* --- BETTER LAYOUT FOR BIGGER SCREENS --- */
+/*@media (min-width: 992px) {
 body {
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto auto 1fr auto auto;
     grid-template-areas:
-    "nav nav nav"
-    "header header header"
     "main main main"
     "section section section"
     "footer footer footer";
