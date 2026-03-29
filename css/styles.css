@@ -16,6 +16,7 @@
 /* --- Bootstrap ONLY for specific components --- */
 
 /* Whitelist: Bootstrap works ONLY on these classes */
+header,
 .navbar,
 .navbar *,
 .carousel,
@@ -26,9 +27,9 @@
 }
 
 /* Blacklist: Reset Bootstrap everywhere else */
-body > *:not(.bootstrap-zone) {
-    all: revert; /* Revert to browser defaults, ignore Bootstrap */
-}
+/*body > *:not(.bootstrap-zone) {
+    all: revert; /* Revert to browser defaults, ignore Bootstrap
+} */
 
 
 /* --- CSS VARIABLES --- */
@@ -290,12 +291,10 @@ p {
 
 /* --- OTHER IMPORTANT ELEMENTS --- */
 
-.hero {
-    padding: 4rem;
-    border-radius: 5px;
-    margin-top: 2rem;
-    background-image: url("images/....png") no-repeat;
-    background-size: cover;
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 main {
@@ -303,6 +302,14 @@ main {
     padding: 2rem;
     border-radius: 5px;
     margin-top: 2rem;
+}
+
+.hero {
+    padding: 4rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+    background-image: url("images/....png") no-repeat;
+    background-size: cover;
 }
 
 section {

@@ -65,11 +65,7 @@
                 </li>
                 <!-- etc -->
             </ul> */
-            .navbar {               /* Sticky navbar - stays at top when scrolling */
-                position: sticky;
-                top: 0;
-                z-index: 1000;      /* Ensures it stays above other content */
-            }
+
             /* --- TYPOGRAPHY --- Headings - Roboto ExtraBold/Bold/Medium for hierarchy */
             h1 {
                 font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -373,6 +369,8 @@
                 <div class="container-fluid">
                     <!-- Logo -->
                     <a class="navbar-brand" href="index.html">🟢 Polar Pets</a>
+                    <!-- CTA visible on mobile only (before hamburger) -->
+                    <a href="/html/ajanvaraus.html" class="btn btn-primary d-lg-none ms-auto me-2">Varaa aika</a>
                     <!-- Hamburger toggle (shows on mobile) -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                             data-bs-target="#navbarNav" aria-controls="navbarNav" 
@@ -380,7 +378,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <!-- Collapsible links -->
-                    <div class="collapse navbar-collapse" id="navbarExample">
+                    <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link" href="/html/elainlaakari.html">Eläinlääkäri</a></li>
                             <li class="nav-item"><a class="nav-link" href="/html/lemmikkihotelli.html">Lemmikkihotelli</a></li>
@@ -390,7 +388,7 @@
                             <li class="nav-item"><a class="nav-link" href="/html/yhteystiedot.html">Yhteystiedot</a></li>
                         </ul>
                     </div>
-                    <!-- CTA Button (shows on desktop, hides on mobile). Tämä näkyisi: btn-primary ms-lg-3-->
+                    <!-- CTA visible on desktop only (inside collapsed menu area, pushes right) -->
                     <a href="/html/ajanvaraus.html" class="btn-primary d-none d-lg-inline-block ms-3">Varaa aika</a>
                 </div>
             </nav>
