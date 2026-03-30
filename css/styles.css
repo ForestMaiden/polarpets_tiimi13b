@@ -159,20 +159,6 @@ p {
 
 /* --- CARDS (service-card styleguidessa) | INFO-BOX | FORM --- */
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
-.index-card{
-    background-color: var(--polar-white);
-    border: 2px solid var(--polar-secondary);
-    border-radius: 5px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px var(--pets-shadow);
-    margin-bottom: 1.5rem;
-}
-/* otsikko ja painike keskitetty (p ja lista pysyy paikoillaan), otsikolle mahd. taustakuva tai yläpuolelle ikoni */
-.index-card:hover,
-.index-card:focus {
-    transform: scale(1.025);
-    box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);    
-}
 .service-card{
     background-color: var(--polar-white);
     border: 2px solid var(--polar-secondary);
@@ -185,6 +171,54 @@ p {
 .service-card:hover,
 .service-card:focus {
     box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
+}
+.index-card{
+    background-color: var(--polar-white);
+    border: 2px solid var(--polar-secondary);
+    border-radius: 5px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px var(--pets-shadow);
+    margin-bottom: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;   
+}
+.index-card:hover,
+.index-card:focus {
+    transform: scale(1.025);
+    box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);    
+}
+.index-card h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    background: linear-gradient(45deg, var(--polar-secondary) 0%, var(--pets-a-glow) 100%);
+    color: var(--polar-primary);
+    padding: 2rem;
+    border-radius: 7.5px;
+    margin-bottom: 1rem;
+}
+/* .index-card h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    
+    background-image: url('images/card-pattern.svg');
+    background-size: cover;
+    background-position: center;
+    color: var(--polar-white);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+} */
+.index-card p {
+    text-align: center;
+}
+.index-card .btn-primary,
+.index-card .btn-secondary {
+    margin-top: auto;
 }
 /* Vaihtoehto kortille. Korostettu tieto, aukioloajat, päivystystiedot, yms. */
 .info-box {
@@ -320,8 +354,12 @@ blockquote {
     /* tms. katso sopiva koko + kursiivi */
 }
 
-.control-icon{
-    /* asettelu & koko, tehdään tarvittaessa useampi (.control-icon2 jne) */
+.icon-control{
+    /* asettelu? & koko, tehdään tarvittaessa useampi (.icon-control2 jne) */
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    color: var(--polar-secondary);
 }
 
 /* --- TABLE --- */
