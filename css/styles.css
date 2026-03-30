@@ -4,7 +4,8 @@
    professional, trustworthy
    ----------------------------------- */
 
-/* TODO: grid, flex, lisää tarvittavia elementtejä tai luokkia, tarkistus, hienosäätö */
+/* TODO: lisää tarvittavia elementtejä tai luokkia, tarkistus, hienosäätö */
+/* FIND OUT: maski, varjo, tms. että teksti pysyy luettavana kuvien päällä */
 
 /* --- CSS RESET --- */
 * {
@@ -113,6 +114,7 @@ p {
     transition: color 0.3s ease;
 }
 
+
 /* --- BUTTONS --- */
 /* Käytä CTA:han (Varaa aika) */
 .btn-primary {
@@ -157,7 +159,9 @@ p {
     box-shadow: 0 0 15px var(--pets-a-glow), 0 0 30px var(--pets-a-glow);
 }
 
-/* --- CARDS (service-card styleguidessa) | INFO-BOX | FORM --- */
+
+/* --- CARDS (service-card styleguidessa) --- */
+
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
 .service-card{
     background-color: var(--polar-white);
@@ -172,6 +176,7 @@ p {
 .service-card:focus {
     box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
 }
+/* Käytä vain kotisivulla */
 .index-card{
     background-color: var(--polar-white);
     border: 2px solid var(--polar-secondary);
@@ -220,6 +225,27 @@ p {
 .index-card .btn-secondary {
     margin-top: auto;
 }
+
+.testimonial-card img {
+    width: 100%;
+    height: clamp(200px, 30vw, 350px);
+    object-fit: cover;
+    border-radius: 5px;
+}
+blockquote {
+    /* tms. katso sopiva koko + kursiivi */
+}
+
+.icon-control{
+    /* asettelu? & koko, tehdään tarvittaessa useampi (.icon-control2 jne) */
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    color: var(--polar-secondary);
+}
+
+
+/* --- INFO-BOX | FORM --- */
 /* Vaihtoehto kortille. Korostettu tieto, aukioloajat, päivystystiedot, yms. */
 .info-box {
     background-color: var(--polar-white);
@@ -245,6 +271,42 @@ p {
     border-color: var(--polar-primary);
 }
 
+
+/* --- TABLE --- Hinnastoa varten */
+table {
+    table-layout: fixed;
+    width: 90%;
+    margin: 10px auto;
+    border-collapse: collapse;
+    border: none;
+}
+thead {
+    background-color: var(--polar-secondary);
+}
+tbody tr:nth-child(odd) {       /* 2n+1 ("odd"=parittomat), 2n (parilliset) */
+    background-color: var(--pets-s-glow);
+}
+tbody tr:nth-child(even) {       /* 2n+1 ("odd"=parittomat), 2n ("even"=parilliset) */
+    background-color: var(--polar-light);
+}
+caption {
+    padding: 1em;
+    background: var(--polar-light);
+    font-size: 1rem;
+    caption-side: top;
+}
+th,
+td {
+    vertical-align: top;
+    padding: 0.3em;
+}
+tr :nth-child(1),
+tr :nth-child(2),
+tr :nth-child(4) {
+  text-align: center;
+  width: 11%;
+}
+
 /* --- FOOTER --- */
 /* Käytä samaa tummaa footeria vaalealla tekstillä kaikilla sivuillamme
    MUISTA laittaa <p class="footer", että teksti toimii kuten pitää. */
@@ -267,7 +329,6 @@ p {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 @media (min-width: 720px) {
     .footer-wrapper {
         grid-template-columns: 1fr 1fr;
@@ -277,7 +338,6 @@ p {
             "copyright copyright";
     }
 }
-
 @media (min-width: 992px) {
     .footer-wrapper {
         grid-template-columns: 1fr 1fr 1fr;
@@ -342,62 +402,6 @@ p {
 }
 
 
-/* --- OTHER IMPORTANT COMPONENTS --- */
-
-.testimonial-card img {
-    width: 100%;
-    height: clamp(200px, 30vw, 350px);
-    object-fit: cover;
-    border-radius: 5px;
-}
-blockquote {
-    /* tms. katso sopiva koko + kursiivi */
-}
-
-.icon-control{
-    /* asettelu? & koko, tehdään tarvittaessa useampi (.icon-control2 jne) */
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
-    color: var(--polar-secondary);
-}
-
-/* --- TABLE --- */
-/* Hinnastoa varten */
-table {
-    table-layout: fixed;
-    width: 90%;
-    margin: 10px auto;
-    border-collapse: collapse;
-    border: none;
-}
-thead {
-    background-color: var(--polar-secondary);
-}
-tbody tr:nth-child(odd) {       /* 2n+1 ("odd"=parittomat), 2n (parilliset) */
-    background-color: var(--pets-s-glow);
-}
-tbody tr:nth-child(even) {       /* 2n+1 ("odd"=parittomat), 2n ("even"=parilliset) */
-    background-color: var(--polar-light);
-}
-caption {
-    padding: 1em;
-    background: var(--polar-light);
-    font-size: 1rem;
-    caption-side: top;
-}
-th,
-td {
-    vertical-align: top;
-    padding: 0.3em;
-}
-tr :nth-child(1),
-tr :nth-child(2),
-tr :nth-child(4) {
-  text-align: center;
-  width: 11%;
-}
-
 /* --- SITE-WIDE GRID LAYOUTS --- */
 
 /* Page wrapper - contains everything except navbar/carousel */
@@ -432,7 +436,6 @@ tr :nth-child(4) {
     object-position: center 30%;
     border-radius: 8px;
 }
-
 .hero-text {
     position: absolute;
     top: 50%;
@@ -441,22 +444,18 @@ tr :nth-child(4) {
     text-align: center;
     width: 80%;
 }
-
 .hero-text h1 {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     color: var(--polar-white);
 }
-
 .hero-text p {
     font-size: clamp(0.9rem, 2vw, 1rem);
     color: var(--polar-white);
 }
-
 .hero-text h1,
 .hero-text p {
     color: var(--polar-white);
 }
-
 .hero-text .btn-primary {
     margin-top: 3rem;
     padding: 0.75rem 2.5rem;
