@@ -43,9 +43,17 @@ header {
 /* Functional colors */
     --pets-border: #BCE2F0;             /* Hienovarainen reunus */
     --pets-shadow: rgba(0,0,0,0.08);    /* Pehmeä varjo */
+    --pets-mask: rgba(0,0,0,0.40);      /* Kuvien päällä olevalle tekstille */
     --pets-s-glow: #91F3CA ;            /* Hienovarainen muutos, hover/activ/etc. */
     --pets-a-glow: #FF85E4 ;            /* Hienovarainen muutos, hover/activ/etc. */
 }
+
+/* --- GRADIENTS for backgrounds ---
+linear-gradient(45deg, var(--polar-secondary) 0%, var(--pets-a-glow) 100%);
+linear-gradient(135deg, var(--polar-light) 0%, var(--pets-s-glow) 100%);
+linear-gradient(90deg, var(--polar-accent) 0%, var(--pets-a-glow) 100%);
+linear-gradient(180deg, var(--polar-light) 0%, transparent 100%);
+*/
 
 /* --- TYPOGRAPHY --- Headings - Roboto ExtraBold/Bold/Medium for hierarchy */
 h1 {
@@ -464,18 +472,20 @@ tr :nth-child(4) {
     transform: translate(-50%, -50%);
     text-align: center;
     width: 80%;
+    background-color: var(--pets-mask);
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    max-width: 700px;
 }
 .hero-text h1 {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     color: var(--polar-white);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
 .hero-text p {
     font-size: clamp(0.9rem, 2vw, 1rem);
     color: var(--polar-white);
-}
-.hero-text h1,
-.hero-text p {
-    color: var(--polar-white);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
 }
 .hero-text .btn-primary {
     margin-top: 3rem;
