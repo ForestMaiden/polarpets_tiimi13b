@@ -65,11 +65,7 @@
                 </li>
                 <!-- etc -->
             </ul> */
-            .navbar {               /* Sticky navbar - stays at top when scrolling */
-                position: sticky;
-                top: 0;
-                z-index: 1000;      /* Ensures it stays above other content */
-            }
+
             /* --- TYPOGRAPHY --- Headings - Roboto ExtraBold/Bold/Medium for hierarchy */
             h1 {
                 font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -121,7 +117,7 @@
             .btn-primary {
                 display: inline-block;
                 background-color: var(--polar-accent);
-                color: var(--color-primary);
+                color: var(--polar-primary);
                 padding: 0.5rem 1.5rem;
                 border: 2px solid var(--polar-accent);
                 border-radius: 7.5px;
@@ -144,7 +140,7 @@
             .btn-secondary {
                 display: inline-block;
                 background-color: transparent;
-                color: var(--color-primary);
+                color: var(--polar-primary);
                 padding: 0.5rem 1.5rem;
                 border: 2px solid var(--polar-secondary);
                 border-radius: 7.5px;
@@ -164,14 +160,18 @@
                 box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
             }
             /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
-            .card {
-                width: 300px;
+            .service-card{
                 background-color: var(--polar-white);
-                border: 2px solid var(--pets-border);
+                border: 2px solid var(--polar-secondary);
                 border-radius: 5px;
                 padding: 1.5rem;
                 box-shadow: 0 2px 5px var(--pets-shadow);
                 margin-bottom: 1.5rem;
+            }
+            .service-card:hover,
+            .service-card:focus {
+                /* transform: scale(1.025); */
+                box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
             }
             /* Vaihtoehto kortille. Korostettu tieto, aukioloajat, päivystystiedot, yms. */
             .info-box {
@@ -196,7 +196,7 @@
             }
             .form-input:focus {
                 outline: none;
-                border-color: var(--color-primary);
+                border-color: var(--polar-primary);
             }
             /* Käytä samaa footeria kaikilla sivuillamme*/
             .footer {
@@ -208,13 +208,34 @@
             }
             .footer-wrapper {
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 1fr;
                 grid-template-areas:
-                    "logo contact hours"
-                    "copyright copyright copyright";
-                gap: 2rem;
+                    "logo"
+                    "hours"
+                    "contact"
+                    "copyright";
+                gap: 1.5rem;
                 max-width: 1200px;
                 margin: 0 auto;
+            }
+
+            @media (min-width: 720px) {
+                .footer-wrapper {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas:
+                        "logo hours"
+                        ". contact"
+                        "copyright copyright";
+                }
+            }
+
+            @media (min-width: 992px) {
+                .footer-wrapper {
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-areas:
+                        "logo contact hours"
+                        "copyright copyright copyright";
+                }
             }
             /* Assign each section to its grid area */
             .footer-logo {
@@ -373,6 +394,8 @@
                 <div class="container-fluid">
                     <!-- Logo -->
                     <a class="navbar-brand" href="index.html">🟢 Polar Pets</a>
+                    <!-- CTA visible on mobile only (before hamburger) -->
+                    <a href="html/ajanvaraus.html" class="btn btn-primary d-lg-none ms-auto me-2">Varaa aika</a>
                     <!-- Hamburger toggle (shows on mobile) -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                             data-bs-target="#navbarNav" aria-controls="navbarNav" 
@@ -380,18 +403,18 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <!-- Collapsible links -->
-                    <div class="collapse navbar-collapse" id="navbarExample">
+                    <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="/html/elainlaakari.html">Eläinlääkäri</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/html/lemmikkihotelli.html">Lemmikkihotelli</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/html/trimmaus.html">Trimmaus</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/html/hinnasto.html">Hinnasto</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/html/ukk.html">UKK</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/html/yhteystiedot.html">Yhteystiedot</a></li>
+                            <li class="nav-item"><a class="nav-link" href="html/elainlaakari.html">Eläinlääkäri</a></li>
+                            <li class="nav-item"><a class="nav-link" href="html/lemmikkihotelli.html">Lemmikkihotelli</a></li>
+                            <li class="nav-item"><a class="nav-link" href="html/trimmaus.html">Trimmaus</a></li>
+                            <li class="nav-item"><a class="nav-link" href="html/hinnasto.html">Hinnasto</a></li>
+                            <li class="nav-item"><a class="nav-link" href="html/ukk.html">UKK</a></li>
+                            <li class="nav-item"><a class="nav-link" href="html/yhteystiedot.html">Yhteystiedot</a></li>
                         </ul>
                     </div>
-                    <!-- CTA Button (shows on desktop, hides on mobile). Tämä näkyisi: btn-primary ms-lg-3-->
-                    <a href="/html/ajanvaraus.html" class="btn-primary d-none d-lg-inline-block ms-3">Varaa aika</a>
+                    <!-- CTA visible on desktop only (inside collapsed menu area, pushes right) -->
+                    <a href="html/ajanvaraus.html" class="btn-primary d-none d-lg-inline-block ms-3">Varaa aika</a>
                 </div>
             </nav>
 
@@ -415,7 +438,7 @@
         <section class="component-section">
             <h2>Kortti (Card)</h2>
             
-            <div class="card" style="max-width: 400px;">
+            <div class="service-card" style="max-width: 300px;">
                 <h3>Eläinklinikka</h3>
                 <p>Meiltä löydät kaikki lemmikkisi hoitoon tarvittavat eläinlääkäripalvelut:</p>
                 <ul>

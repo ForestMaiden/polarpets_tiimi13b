@@ -13,22 +13,21 @@
     box-sizing: border-box;
 }
 
-/* --- Bootstrap ONLY for specific components --- */
-
-/* Whitelist: Bootstrap works ONLY on these classes */
-.navbar,
-.navbar *,
-.carousel,
-.carousel *,
-.bootstrap-zone,
-.bootstrap-zone * {
-    /* Bootstrap styles allowed here */
+body {
+    background-color: var(--polar-light);
 }
 
-/* Blacklist: Reset Bootstrap everywhere else */
-body > *:not(.bootstrap-zone) {
-    all: revert; /* Revert to browser defaults, ignore Bootstrap */
+section {
+    padding: 3rem 0;
 }
+
+/* --- BOOTSTRAP AREAS --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/* + carousel if time */
 
 
 /* --- CSS VARIABLES --- */
@@ -113,12 +112,6 @@ p {
     color: var(--polar-light) !important;
     transition: color 0.3s ease;
 }
-/* Sticky navbar - stays at top when scrolling */
-.navbar {               
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Ensures it stays above other content */
-}
 
 /* --- ALERT --- straight to HTML, because it's Bootstrap element like the navbar
 
@@ -134,7 +127,7 @@ p {
 .btn-primary {
     display: inline-block;
     background-color: var(--polar-accent);
-    color: var(--color-primary);
+    color: var(--polar-primary);
     padding: 0.5rem 1.5rem;
     border: none;
     border-radius: 5px;
@@ -155,7 +148,7 @@ p {
 .btn-secondary {
     display: inline-block;
     background-color: transparent;
-    color: var(--color-primary);
+    color: var(--polar-primary);
     padding: 0.5rem 1.5rem;
     border: 2px solid var(--polar-secondary);
     border-radius: 5px;
@@ -167,7 +160,7 @@ p {
     width: fit-content;
 }
 .btn-secondary:hover,
-.btn-primary:focus {
+.btn-secondary:focus {
     background-color: transparent;
     color: var(--polar-primary);
     box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
@@ -175,20 +168,18 @@ p {
 
 /* --- CARD | INFO-BOX | FORM --- */
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
-.main-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
-    width: 300px;
+.service-card{
     background-color: var(--polar-white);
-    border: 2px solid var(--pets-border);
+    border: 2px solid var(--polar-secondary);
     border-radius: 5px;
     padding: 1.5rem;
     box-shadow: 0 2px 5px var(--pets-shadow);
     margin-bottom: 1.5rem;
 }
-.service-card{
-
+.service-card:hover,
+.service-card:focus {
+    /* transform: scale(1.025); */
+    box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
 }
 /* Vaihtoehto kortille. Korostettu tieto, aukioloajat, päivystystiedot, yms. */
 .info-box {
@@ -212,7 +203,7 @@ p {
 }
 .form-input:focus {
     outline: none;
-    border-color: var(--color-primary);
+    border-color: var(--polar-primary);
 }
 
 /* --- FOOTER --- */
@@ -227,15 +218,36 @@ p {
 }
 .footer-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "logo contact hours"
-        "copyright copyright copyright";
-    gap: 2rem;
+        "logo"
+        "hours"
+        "contact"
+        "copyright";
+    gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
 }
-/* Assign each section to its grid area */
+
+@media (min-width: 720px) {
+    .footer-wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "logo hours"
+            ". contact"
+            "copyright copyright";
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "logo contact hours"
+            "copyright copyright copyright";
+    }
+}
+
 .footer-logo {
     grid-area: logo;
 }
@@ -288,29 +300,9 @@ p {
     text-align: left;
 }
 
-/* --- OTHER IMPORTANT ELEMENTS --- */
+/* --- OTHER IMPORTANT COMPONENTS --- */
 
-.hero {
-    padding: 4rem;
-    border-radius: 5px;
-    margin-top: 2rem;
-    background-image: url("images/....png") no-repeat;
-    background-size: cover;
-}
 
-main {
-    grid-area: main;
-    padding: 2rem;
-    border-radius: 5px;
-    margin-top: 2rem;
-}
-
-section {
-    grid-area: section;
-    padding: 2rem;
-    border-radius: 5px;
-    margin-top: 2rem;
-}
 
 /* --- TABLE --- */
 /* Hinnastoa varten */
@@ -348,57 +340,78 @@ tr :nth-child(4) {
   width: 11%;
 }
 
+/* --- SITE-WIDE GRID LAYOUTS --- */
 
-/* --- MOBILE FIRST LAYOUT --- */
-/*body {
+/* Page wrapper - contains everything except navbar/carousel */
+.site-grid {
     display: grid;
-    grid-template-areas:
-    "main"
-    "section"
-    "footer";
-    gap: 10px;
-    min-height: 100vh;
-    background-color: var(--polar-light);
-}
-*/
-@media (max-width: 460px) {
-    .footer-wrapper {
-        grid-template-columns: 1fr !important;
-        grid-template-areas:
-            "logo"
-            "hours"
-            "contact"
-            "copyright" !important;
-        gap: 1.5rem;
-    }
-    .footer-copyright {
-        padding-top: 0.5rem;
-    }
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-/* --- BETWEEN LAYOUT --- */
-@media (max-width: 720px) {
-    .footer-wrapper {
-        grid-template-columns: 1fr 1fr; /* Two columns */
-        grid-template-areas:
-            "logo hours"
-            "empty contact"
-            "copyright copyright";
-    }
-}
+/* --- LAYOUT TEMPLATES --- */
 
-/* --- BETTER LAYOUT FOR BIGGER SCREENS --- */
-/*@media (min-width: 992px) {
-body {
+/* Hero Section - Centered single column */
+.hero {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto auto 1fr auto auto;
-    grid-template-areas:
-    "main main main"
-    "section section section"
-    "footer footer footer";
-    gap: 10px;
-    min-height: 100vh;
-    background-color: var(--polar-light);
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 3rem 1rem;
 }
+
+/* Two Column */
+.layout-two {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
+
+@media (min-width: 768px) {
+    .layout-two {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Three Column - Equal widths (service cards) */
+.layout-three {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .layout-three {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .layout-three {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Four Column */
+.layout-four {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 460px) {
+    .layout-four {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .layout-four {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
