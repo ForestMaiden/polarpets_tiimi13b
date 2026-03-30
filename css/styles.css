@@ -19,7 +19,7 @@ body {
 }
 
 section {
-    padding: 3rem 0;
+    padding: 1.5rem;
 }
 
 /* --- BOOTSTRAP AREAS --- */
@@ -165,7 +165,7 @@ p {
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
 .service-card{
     background-color: var(--polar-white);
-    border: 2px solid var(--polar-secondary);
+    border: 1px solid var(--pets-s-glow);
     border-radius: 5px;
     padding: 1.5rem;
     box-shadow: 0 2px 5px var(--pets-shadow);
@@ -226,14 +226,35 @@ p {
     margin-top: auto;
 }
 
+.testimonial-card {
+    background-color: var(--polar-white);
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 0px 5px var(--pets-s-glow);
+    align-items: center;
+}
 .testimonial-card img {
     width: 100%;
     height: clamp(200px, 30vw, 350px);
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 7.5px;
 }
-blockquote {
-    /* tms. katso sopiva koko + kursiivi */
+.testimonial-card blockquote {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--polar-text-body);
+    line-height: 1.7;
+    text-align: center;
+    position: relative;
+}
+.testimonial-card figcaption {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--polar-primary);
+    text-align: center;
+    margin-top: 0.5rem;
 }
 
 .icon-control{
