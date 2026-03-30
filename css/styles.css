@@ -150,7 +150,7 @@ p {
     background-color: transparent;
     color: var(--polar-primary);
     padding: 0.5rem 1.5rem;
-    border: 2px solid var(--polar-secondary);
+    border: 2px solid var(--polar-accent);
     border-radius: 5px;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 400;
@@ -163,12 +163,12 @@ p {
 .btn-secondary:focus {
     background-color: transparent;
     color: var(--polar-primary);
-    box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
+    box-shadow: 0 0 15px var(--pets-a-glow), 0 0 30px var(--pets-a-glow);
 }
 
-/* --- CARD | INFO-BOX | FORM --- */
+/* --- CARDS | INFO-BOX | FORM --- */
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
-.service-card{
+.index-card{
     background-color: var(--polar-white);
     border: 2px solid var(--polar-secondary);
     border-radius: 5px;
@@ -176,9 +176,22 @@ p {
     box-shadow: 0 2px 5px var(--pets-shadow);
     margin-bottom: 1.5rem;
 }
+.index-card:hover,
+.index-card:focus {
+    transform: scale(1.025);
+    box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);    
+}
+.service-card{
+    background-color: var(--polar-white);
+    border: 2px solid var(--polar-secondary);
+    border-radius: 5px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px var(--pets-shadow);
+    margin-bottom: 1.5rem;
+    height: fit-content;
+}
 .service-card:hover,
 .service-card:focus {
-    /* transform: scale(1.025); */
     box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
 }
 /* Vaihtoehto kortille. Korostettu tieto, aukioloajat, päivystystiedot, yms. */
