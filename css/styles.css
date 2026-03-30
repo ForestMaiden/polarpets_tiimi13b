@@ -405,7 +405,7 @@ tr :nth-child(4) {
 
 .hero-text h1,
 .hero-text p {
-    color: var(--polar-white);    /* teksti valkoiseksi kuvaa vasten */
+    color: var(--polar-white);
 }
 
 .hero-text .btn-primary {
