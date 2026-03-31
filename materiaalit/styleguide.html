@@ -25,9 +25,10 @@
             /* Functional colors */
             --pets-border: #BCE2F0;             /* Hienovarainen reunus */
             --pets-shadow: rgba(0,0,0,0.08);    /* Pehmeä varjo */
+            --pets-mask: rgba(0,0,0,0.40);      /* Kuvien päällä olevalle tekstille */
             --pets-s-glow: #91F3CA ;            /* Hienovarainen muutos, hover/activ/etc. */
             --pets-a-glow: #FF85E4 ;            /* Hienovarainen muutos, hover/activ/etc. */
-            }
+        }
             /* --- BODY STYLING (Ei ole pysyvä osa meidän tyyliä) --- */
             body {
                 font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -119,16 +120,14 @@
                 background-color: var(--polar-accent);
                 color: var(--polar-primary);
                 padding: 0.5rem 1.5rem;
-                border: 2px solid var(--polar-accent);
-                border-radius: 7.5px;
+                border: none;
+                border-radius: 5px;
                 font-family: "Roboto", Helvetica, Arial, sans-serif;
                 font-weight: 500;
                 text-decoration: none;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
                 width: fit-content;
-                position: relative;
-                overflow: hidden;
             }
             .btn-primary:hover,
             .btn-primary:focus {
@@ -143,15 +142,13 @@
                 color: var(--polar-primary);
                 padding: 0.5rem 1.5rem;
                 border: 2px solid var(--polar-accent);
-                border-radius: 7.5px;
+                border-radius: 5px;
                 font-family: "Roboto", Helvetica, Arial, sans-serif;
                 font-weight: 400;
                 text-decoration: none;
                 cursor: pointer;
-                transition: background-color 0.3s ease;
+                transition: all 0.3s ease;
                 width: fit-content;
-                position: relative;
-                overflow: hidden;
             }
             .btn-secondary:hover,
             .btn-secondary:focus {
@@ -162,7 +159,7 @@
             /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
             .service-card{
                 background-color: var(--polar-white);
-                border: 2px solid var(--polar-secondary);
+                border: 1px solid var(--pets-s-glow);
                 border-radius: 5px;
                 padding: 1.5rem;
                 box-shadow: 0 2px 5px var(--pets-shadow);
@@ -218,7 +215,6 @@
                 max-width: 1200px;
                 margin: 0 auto;
             }
-
             @media (min-width: 720px) {
                 .footer-wrapper {
                     grid-template-columns: 1fr 1fr;
@@ -228,7 +224,6 @@
                         "copyright copyright";
                 }
             }
-
             @media (min-width: 992px) {
                 .footer-wrapper {
                     grid-template-columns: 1fr 1fr 1fr;
@@ -237,7 +232,7 @@
                         "copyright copyright copyright";
                 }
             }
-            /* Assign each section to its grid area */
+
             .footer-logo {
                 grid-area: logo;
             }
@@ -257,16 +252,18 @@
             .footer h4 {
                 color: var(--polar-light);
                 margin-top: 0;
-                margin-bottom: 0.5rem;
+                margin-bottom: 1rem;
             }
             .footer a {
                 color: var(--polar-secondary);
                 text-decoration: none;
-                transition: color 0.3s ease;
+                transition: all 0.3s ease;
+                display: inline-block; /* Necessary for transform to work */
             }
             .footer a:hover,
             .footer a:focus {
-                box-shadow: 0 0 15px var(--polar-secondary), 0 0 30px var(--pets-s-glow);
+                transform: scale(1.1);
+                /* text-shadow: 0 0 10px var(--polar-secondary); */
             }
             .footer ul {
                 list-style: none;
@@ -279,8 +276,8 @@
             .footer dl {
                 margin: 0;
                 display: grid;
-                grid-template-columns: auto 1fr;
-                gap: 0.5rem 1rem;
+                grid-template-columns: auto 1fr;    /* Label takes what it needs, time fills rest */
+                gap: 1rem 1.5rem;                   /* vertical horizontal */
             }
             .footer dt {
                 font-weight: 500;
@@ -405,7 +402,7 @@
                     <!-- Collapsible links -->
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Etusivu</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="index.html">Etusivu</a></li>
                             <li class="nav-item"><a class="nav-link" href="html/elainlaakari.html">Eläinlääkäri</a></li>
                             <li class="nav-item"><a class="nav-link" href="html/lemmikkihotelli.html">Lemmikkihotelli</a></li>
                             <li class="nav-item"><a class="nav-link" href="html/trimmaus.html">Trimmaus</a></li>
