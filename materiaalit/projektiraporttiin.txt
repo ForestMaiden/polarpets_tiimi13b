@@ -1,0 +1,127 @@
+Raportti aineisto:
+
+Ryhmän sisäisenä kommunikaatiovälineenä toimii Discord. Projekti toteutetaan Kanban- 
+menetelmää soveltaen, alitiimit antavat toisilleen palautetta projektin aikana. 
+Kanban-taulu toteutetaan Trellossa. Sovelluksenhallintajärjestelmänä toimii Git/GitHub. 
+Täydentyvä raportti sekä tuntikirjanpito (Excel) pidetään OneDrive Tiimi 13 kansiossa. 
+Palautamme raportin PDF muodossa.
+Molempien alitiimien tavoitteena on arvosana 5.
+
+TIIMI 13B
+Kanban-taulu alkaa Backlogista (priorisoidaan järjestelemällä tärkeimmät ylös). 
+To Do:lle siirretään seuraavia tehtäviä. Doing näyttää mitä on työn alla. 
+Done sarakkeelle siirrämme palautus/julkaisu -valmiit tehtävät, jotka saavat vielä 
+OK -merkin läpäistyään tarkistuksen/katselmoinnin.
+
+Visualinen ilme: 
+•	Revontulet, hillitty, vaalea oletus /pohja, modernin minimalistinen. 
+•	Värit ja niiden käyttö: 60 %, 30 % ja 10 % sivustolla + ripaus pohjoisen taikaa.
+•	Muodot: vähän pehmennetty.
+Päivystys ehdottomasti ennemmin headeriin kuin footeriin.
+
+
+Design Rationale
+
+
+
+
+Sivukartta
+1.	Etusivu - index.html (hero, ajanvaraus CTA, päivystys, palvelukortit, asiakas)
+    2.	Eläinlääkäri - .html ()
+    3.	Lemmikkihotelli - html ()
+    4.	Trimmaus - .html ()
+    5.	Hinnasto - .html ()
+    6.	UKK - .html ()
+    7.	Yhteystiedot - .html (Yhteystiedot, aukiolo, yhteydenottolomake, kartta)
+    8.  Ajanvaraus (ei toteuteta/placeholder)
+
+
+
+
+Poster / one-pager
+
+linkki julkaistuun sivustoon
+kuvakaappaus etusivusta
+Kohdeyleisö: Lemmikkien omistajat (koirat, kissat ja pieneläimet), jotka etsivät 
+luotettavaa eläinlääkäripalvelua tai hoitopaikkaa sekä uudet lemmikinomistajat, 
+jotka tarvitsevat tietoa peruspalveluista (rokotukset, mikrosiru, sterilisaatio).
+Käyttäjätehtävät: 
+1.	Löytää oikea palvelu nopeasti (eläinlääkäri vs. trimmaus vs. lemmikkihotelli).
+2.	Selvittää hinnat, aukioloajat ja päivystystiedot.
+3.	Siirtyä ajanvaraukseen tai lähettää yhteydenottopyyntö.
+Design-valinta: (1)
+Saavutettavuusvalinta: (1)
+
+
+
+
+--------------------------------------------------------------------------------------
+
+Palautus 2:
+
+wireframe
+
+Kuva 1. Etusivun desktop wireframe.
+https://github.com/ForestMaiden/polarpets_tiimi13b/blob/main/materiaalit/tiimib_wireframe_etusivu.png  
+Kuva 2. Sisältösivun desktop wireframe. 
+https://github.com/ForestMaiden/polarpets_tiimi13b/blob/main/materiaalit/tiimib_wireframe_elainlaakari.png 
+
+
+Kuvaruutukaappauksia sivuston ulkoasusta 
+
+kuvat: nav ja alert, hero, indexin palvelukortit, footer
+Sivuston ulkoasu ei ole vielä valmis. Aurora-inspiraatio pysyy, mutta värit voivat 
+vielä muuttua matkan varrella.
+
+
+Miten projektilla menee 
+
+Alitiimi B:llä projektin parissa työskennellään aktiivisesti Kanban menetelmällä. 
+Viikoittaisten palaverien lisäksi käytämme viestintään aktiivisesti Discordia lähes 
+päivittäin.  
+
+Työnjaon päälinjat ilmoitimme ensimmäisen palautuksen yhteydessä: 
+Vilma keskittyy enimmäkseen HTML:n ja Laura CSS:ään, mutta tuemme ja täydennämme 
+toinen toisiamme. Materiaalien ja unelmien osalta teemme työnjakoa myös lennossa.  
+
+Olemme onnistuneet välttämään päällekkäistä tekemistä, merge konflikteja ja sivusto 
+valmistuu hyvään tahtiin pala palalta. 
+
+------------------------------------------------------------------------------------
+
+Palautus 1:
+	
+Toteutamme kaksi verkkosivustoa esimerkkiyritykselle:
+Polar Pets – eläinlääkäri / eläinhoitola (Deadline 22.4.2026)
+
+ 
+
+Tiimi 13 – Päivittelijät jakautui kahteen alitiimiin
+
+Tiimi 13A: Jari Lavijärvi (WhiteSt1), Juho Katila (Juho-tamk) & Kaisa Tahkio (sannkaisa)
+
+·       Raportti ja ryhmäpalautus -vastaava
+
+https://github.com/WhiteSt1/projekti1_tiimi13_alitiimi_a
+
+https://trello.com/b/SSF6hoxZ/tuotekehitysprojekti-i-tiimi-13-alitiimi-a
+
+ 
+
+Tiimi 13B
+
+Laura Juvonen (ForestMaiden)
+
+·       GitHub pääkäyttäjä
+
+·       CSS
+
+Vilma Porvari (Kurrnau)
+
+·       Trello pääkäyttäjä
+
+·       HTML
+
+https://github.com/ForestMaiden/polarpets_tiimi13b
+
+https://trello.com/b/vTMn1D4j/13-alitiimi-b-polar-pets
