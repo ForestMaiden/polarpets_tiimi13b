@@ -1,5 +1,8 @@
 Raportti aineisto:
 
+Tavoite & Kohdeyleisö (molemmilla alitiimeillä sama)
+
+Roolit & työnjako
 Ryhmän sisäisenä kommunikaatiovälineenä toimii Discord. Projekti toteutetaan Kanban- 
 menetelmää soveltaen, alitiimit antavat toisilleen palautetta projektin aikana. 
 Kanban-taulu toteutetaan Trellossa. Sovelluksenhallintajärjestelmänä toimii Git/GitHub. 
@@ -7,36 +10,81 @@ Täydentyvä raportti sekä tuntikirjanpito (Excel) pidetään OneDrive Tiimi 13
 Palautamme raportin PDF muodossa.
 Molempien alitiimien tavoitteena on arvosana 5.
 
+
 TIIMI 13B
+
+Julkaisu: 
+Repo: https://github.com/ForestMaiden/polarpets_tiimi13b
+Projektinhallintataulu: https://trello.com/b/vTMn1D4j/13-alitiimi-b-polar-pets
+Wireframet: 
+https://github.com/ForestMaiden/polarpets_tiimi13b/blob/main/materiaalit/tiimib_wireframe_etusivu.png
+https://github.com/ForestMaiden/polarpets_tiimi13b/blob/main/materiaalit/tiimib_wireframe_elainlaakari.png
+
+
+Sivukartta
+
+1.	Etusivu - index.html (hero, ajanvaraus CTA, päivystys, palvelukolmijako, asiakas)
+    2.	Eläinlääkäri - .html (vastaanoto, rokotukset, hammashoito, kirurgia, mikrosiru)
+    3.	Lemmikkihotelli - html (kodinomainen lemmikkihotelli)
+    4.	Trimmaus - .html (trimmaus ja päivähoito)
+    5.	Hinnasto - .html (suuntaa-antavat hinnat palveluittain)
+    6.	UKK - .html (usein kysytyt kysymykset ja vastaukset niihin)
+    7.	Yhteystiedot - .html (yhteystiedot + päivystys, aukiolo, yhteydenottolomake, kartta)
+    8.  Ajanvaraus (ei toteuteta/placeholder)
+
+
+Roolit & työnjako
+
+GitHub pääkäyttäjä ja CSS: Laura Juvonen
+Trello pääkäyttäjä ja HTML: Vilma Porvari
+
+
+Valittu työskentelymenetelmä ja miten sitä käytettiin
+
 Kanban-taulu alkaa Backlogista (priorisoidaan järjestelemällä tärkeimmät ylös). 
 To Do:lle siirretään seuraavia tehtäviä. Doing näyttää mitä on työn alla. 
 Done sarakkeelle siirrämme palautus/julkaisu -valmiit tehtävät, jotka saavat vielä 
 OK -merkin läpäistyään tarkistuksen/katselmoinnin.
 
-Visualinen ilme: 
-•	Revontulet, hillitty, vaalea oletus /pohja, modernin minimalistinen. 
-•	Värit ja niiden käyttö: 60 %, 30 % ja 10 % sivustolla + ripaus pohjoisen taikaa.
-•	Muodot: vähän pehmennetty.
-Päivystys ehdottomasti ennemmin headeriin kuin footeriin.
++ SCREENSHOT TRELLOSTA
 
 
-Design Rationale
+Tyyliohje, design system ja Design Rationale
+
+Tyyliohje: https://github.com/ForestMaiden/polarpets_tiimi13b/blob/main/materiaalit/styleguide.html
+2 lauseen design system tähän
+- Käytämme samaa kapeaa & kiinteää navbar + alert kaikilla sivuillamme, 
+koska se helpottaa oleellisimman tiedon sekä CTA:n löytämistä nopeasti.
+-
+-
+-
+-
+- Päätös: . Peruste: .
 
 
-
-
-Sivukartta
-1.	Etusivu - index.html (hero, ajanvaraus CTA, päivystys, palvelukortit, asiakas)
-    2.	Eläinlääkäri - .html ()
-    3.	Lemmikkihotelli - html ()
-    4.	Trimmaus - .html ()
-    5.	Hinnasto - .html ()
-    6.	UKK - .html ()
-    7.	Yhteystiedot - .html (Yhteystiedot, aukiolo, yhteydenottolomake, kartta)
-    8.  Ajanvaraus (ei toteuteta/placeholder)
+SEO ja AI-optimointi toimet
 
 
 
+Tarkistimme saavutettavuuden ja responsiivisuuden osalta
+
+
+
+Vertaisarvioinnin palaute toiselta tiimiltä ja tekemämme muutokset
+
+
+
+Miten tekoälyä käytettiin (mihin ja millä tavalla, 2-5 riviä)
+-
+-
+-
+
+
+ERILLISINÄ TIEDOSTOINA PALAUTETTAVAT:
+tuntikirjanpito Excel
+grafiikka-aineisto (valmiit tiedostot + lyhyt selite)
+
+-------------------------------------------------------------------------------------------
 
 Poster / one-pager
 
@@ -52,8 +100,16 @@ Käyttäjätehtävät:
 Design-valinta: (1)
 Saavutettavuusvalinta: (1)
 
+--------------------------------------------------------------------------------------
+MUISTIINPANOT
 
-
+Visualinen ilme: 
+•	Revontulet, hillitty, vaalea oletus /pohja, modernin minimalistinen. 
+•	Värit ja niiden käyttö: 60 %, 30 % ja 10 % sivustolla + ripaus pohjoisen taikaa.
+•	Muodot: vähän pehmennetty.
+Luotettava, lämmin, eläinystävällinen. Ammattimainen mutta ei kliininen. Lemmikit ja niiden 
+hyvinvointi keskiössä – sivuston pitää tuntua turvalliselta paikalta.
+Päivystys ehdottomasti ennemmin headeriin kuin footeriin.
 
 --------------------------------------------------------------------------------------
 
