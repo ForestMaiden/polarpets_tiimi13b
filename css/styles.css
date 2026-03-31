@@ -113,15 +113,6 @@ p {
     transition: color 0.3s ease;
 }
 
-/* --- ALERT --- straight to HTML, because it's Bootstrap element like the navbar
-
-<div class="alert alert-info alert-dismissible fade show m-0 text-center" role="alert">
-    <strong>📞 Päivystys 24/7:</strong> 044 123 4567
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-
-*/
-
 /* --- BUTTONS --- */
 /* Käytä CTA:han (Varaa aika) */
 .btn-primary {
@@ -166,7 +157,7 @@ p {
     box-shadow: 0 0 15px var(--pets-a-glow), 0 0 30px var(--pets-a-glow);
 }
 
-/* --- CARDS | INFO-BOX | FORM --- */
+/* --- CARDS (service-card styleguidessa) | INFO-BOX | FORM --- */
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
 .index-card{
     background-color: var(--polar-white);
@@ -176,6 +167,7 @@ p {
     box-shadow: 0 2px 5px var(--pets-shadow);
     margin-bottom: 1.5rem;
 }
+/* otsikko ja painike keskitetty (p ja lista pysyy paikoillaan), otsikolle mahd. taustakuva tai yläpuolelle ikoni */
 .index-card:hover,
 .index-card:focus {
     transform: scale(1.025);
@@ -217,15 +209,6 @@ p {
 .form-input:focus {
     outline: none;
     border-color: var(--polar-primary);
-}
-
-/* --- TESTIMONIAL --*/
-
-.testimonial-card img {
-    width: 100%;
-    height: clamp(200px, 30vw, 350px);
-    object-fit: cover;
-    border-radius: 5px;
 }
 
 /* --- FOOTER --- */
@@ -289,16 +272,18 @@ p {
 .footer h4 {
     color: var(--polar-light);
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 .footer a {
     color: var(--polar-secondary);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    display: inline-block; /* Necessary for transform to work */
 }
 .footer a:hover,
 .footer a:focus {
-    box-shadow: 0 0 15px var(--polar-secondary), 0 0 30px var(--pets-s-glow);
+    transform: scale(1.1);
+    /* text-shadow: 0 0 10px var(--polar-secondary); */
 }
 .footer ul {
     list-style: none;
@@ -312,7 +297,7 @@ p {
     margin: 0;
     display: grid;
     grid-template-columns: auto 1fr;    /* Label takes what it needs, time fills rest */
-    gap: 0.5rem 1rem;                   /* vertical horizontal */
+    gap: 1rem 1.5rem;                   /* vertical horizontal */
 }
 .footer dt {
     font-weight: 500;
@@ -322,9 +307,22 @@ p {
     text-align: left;
 }
 
+
 /* --- OTHER IMPORTANT COMPONENTS --- */
 
+.testimonial-card img {
+    width: 100%;
+    height: clamp(200px, 30vw, 350px);
+    object-fit: cover;
+    border-radius: 5px;
+}
+blockquote {
+    /* tms. katso sopiva koko + kursiivi */
+}
 
+.control-icon{
+    /* asettelu & koko, tehdään tarvittaessa useampi (.control-icon2 jne) */
+}
 
 /* --- TABLE --- */
 /* Hinnastoa varten */
