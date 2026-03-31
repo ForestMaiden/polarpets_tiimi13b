@@ -4,7 +4,8 @@
    professional, trustworthy
    ----------------------------------- */
 
-/* TODO: grid, flex, lisää tarvittavia elementtejä tai luokkia, tarkistus, hienosäätö */
+/* TODO: lisää tarvittavia elementtejä tai luokkia, tarkistus, hienosäätö */
+/* FIND OUT: maski, varjo, tms. että teksti pysyy luettavana kuvien päällä */
 
 /* --- CSS RESET --- */
 * {
@@ -18,7 +19,7 @@ body {
 }
 
 section {
-    padding: 3rem 0;
+    padding: 1.5rem;
 }
 
 /* --- BOOTSTRAP AREAS --- */
@@ -113,6 +114,7 @@ p {
     transition: color 0.3s ease;
 }
 
+
 /* --- BUTTONS --- */
 /* Käytä CTA:han (Varaa aika) */
 .btn-primary {
@@ -157,25 +159,13 @@ p {
     box-shadow: 0 0 15px var(--pets-a-glow), 0 0 30px var(--pets-a-glow);
 }
 
-/* --- CARDS (service-card styleguidessa) | INFO-BOX | FORM --- */
+
+/* --- CARDS (service-card styleguidessa) --- */
+
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
-.index-card{
-    background-color: var(--polar-white);
-    border: 2px solid var(--polar-secondary);
-    border-radius: 5px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px var(--pets-shadow);
-    margin-bottom: 1.5rem;
-}
-/* otsikko ja painike keskitetty (p ja lista pysyy paikoillaan), otsikolle mahd. taustakuva tai yläpuolelle ikoni */
-.index-card:hover,
-.index-card:focus {
-    transform: scale(1.025);
-    box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);    
-}
 .service-card{
     background-color: var(--polar-white);
-    border: 2px solid var(--polar-secondary);
+    border: 1px solid var(--pets-s-glow);
     border-radius: 5px;
     padding: 1.5rem;
     box-shadow: 0 2px 5px var(--pets-shadow);
@@ -186,6 +176,97 @@ p {
 .service-card:focus {
     box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
 }
+/* Käytä vain kotisivulla */
+.index-card{
+    background-color: var(--polar-white);
+    border: 2px solid var(--polar-secondary);
+    border-radius: 5px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px var(--pets-shadow);
+    margin-bottom: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;   
+}
+.index-card:hover,
+.index-card:focus {
+    transform: scale(1.025);
+    box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);    
+}
+.index-card h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    background: linear-gradient(45deg, var(--polar-secondary) 0%, var(--pets-a-glow) 100%);
+    color: var(--polar-primary);
+    padding: 2rem;
+    border-radius: 7.5px;
+    margin-bottom: 1rem;
+}
+/* .index-card h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    
+    background-image: url('images/card-pattern.svg');
+    background-size: cover;
+    background-position: center;
+    color: var(--polar-white);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+} */
+.index-card p {
+    text-align: center;
+}
+.index-card .btn-primary,
+.index-card .btn-secondary {
+    margin-top: auto;
+}
+
+.testimonial-card {
+    background-color: var(--polar-white);
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 0px 5px var(--pets-s-glow);
+    align-items: center;
+}
+.testimonial-card img {
+    width: 100%;
+    height: clamp(200px, 30vw, 350px);
+    object-fit: cover;
+    border-radius: 7.5px;
+}
+.testimonial-card blockquote {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--polar-text-body);
+    line-height: 1.7;
+    text-align: center;
+    position: relative;
+}
+.testimonial-card figcaption {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--polar-primary);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.icon-control{
+    /* asettelu? & koko, tehdään tarvittaessa useampi (.icon-control2 jne) */
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    color: var(--polar-secondary);
+}
+
+
+/* --- INFO-BOX | FORM --- */
 /* Vaihtoehto kortille. Korostettu tieto, aukioloajat, päivystystiedot, yms. */
 .info-box {
     background-color: var(--polar-white);
@@ -211,6 +292,42 @@ p {
     border-color: var(--polar-primary);
 }
 
+
+/* --- TABLE --- Hinnastoa varten */
+table {
+    table-layout: fixed;
+    width: 90%;
+    margin: 10px auto;
+    border-collapse: collapse;
+    border: none;
+}
+thead {
+    background-color: var(--polar-secondary);
+}
+tbody tr:nth-child(odd) {       /* 2n+1 ("odd"=parittomat), 2n (parilliset) */
+    background-color: var(--pets-s-glow);
+}
+tbody tr:nth-child(even) {       /* 2n+1 ("odd"=parittomat), 2n ("even"=parilliset) */
+    background-color: var(--polar-light);
+}
+caption {
+    padding: 1em;
+    background: var(--polar-light);
+    font-size: 1rem;
+    caption-side: top;
+}
+th,
+td {
+    vertical-align: top;
+    padding: 0.3em;
+}
+tr :nth-child(1),
+tr :nth-child(2),
+tr :nth-child(4) {
+  text-align: center;
+  width: 11%;
+}
+
 /* --- FOOTER --- */
 /* Käytä samaa tummaa footeria vaalealla tekstillä kaikilla sivuillamme
    MUISTA laittaa <p class="footer", että teksti toimii kuten pitää. */
@@ -233,7 +350,6 @@ p {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 @media (min-width: 720px) {
     .footer-wrapper {
         grid-template-columns: 1fr 1fr;
@@ -243,7 +359,6 @@ p {
             "copyright copyright";
     }
 }
-
 @media (min-width: 992px) {
     .footer-wrapper {
         grid-template-columns: 1fr 1fr 1fr;
@@ -308,58 +423,6 @@ p {
 }
 
 
-/* --- OTHER IMPORTANT COMPONENTS --- */
-
-.testimonial-card img {
-    width: 100%;
-    height: clamp(200px, 30vw, 350px);
-    object-fit: cover;
-    border-radius: 5px;
-}
-blockquote {
-    /* tms. katso sopiva koko + kursiivi */
-}
-
-.control-icon{
-    /* asettelu & koko, tehdään tarvittaessa useampi (.control-icon2 jne) */
-}
-
-/* --- TABLE --- */
-/* Hinnastoa varten */
-table {
-    table-layout: fixed;
-    width: 90%;
-    margin: 10px auto;
-    border-collapse: collapse;
-    border: none;
-}
-thead {
-    background-color: var(--polar-secondary);
-}
-tbody tr:nth-child(odd) {       /* 2n+1 ("odd"=parittomat), 2n (parilliset) */
-    background-color: var(--pets-s-glow);
-}
-tbody tr:nth-child(even) {       /* 2n+1 ("odd"=parittomat), 2n ("even"=parilliset) */
-    background-color: var(--polar-light);
-}
-caption {
-    padding: 1em;
-    background: var(--polar-light);
-    font-size: 1rem;
-    caption-side: top;
-}
-th,
-td {
-    vertical-align: top;
-    padding: 0.3em;
-}
-tr :nth-child(1),
-tr :nth-child(2),
-tr :nth-child(4) {
-  text-align: center;
-  width: 11%;
-}
-
 /* --- SITE-WIDE GRID LAYOUTS --- */
 
 /* Page wrapper - contains everything except navbar/carousel */
@@ -394,7 +457,6 @@ tr :nth-child(4) {
     object-position: center 30%;
     border-radius: 8px;
 }
-
 .hero-text {
     position: absolute;
     top: 50%;
@@ -403,22 +465,18 @@ tr :nth-child(4) {
     text-align: center;
     width: 80%;
 }
-
 .hero-text h1 {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     color: var(--polar-white);
 }
-
 .hero-text p {
     font-size: clamp(0.9rem, 2vw, 1rem);
     color: var(--polar-white);
 }
-
 .hero-text h1,
 .hero-text p {
     color: var(--polar-white);
 }
-
 .hero-text .btn-primary {
     margin-top: 3rem;
     padding: 0.75rem 2.5rem;
