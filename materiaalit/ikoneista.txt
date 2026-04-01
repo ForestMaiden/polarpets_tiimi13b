@@ -1,0 +1,18 @@
+Kahlasin bootstrapin ikonikirjaston -> ei juur parempia kuin ladattu valikoima.
+
+Materiaaleissa icons .svg:
+Henkilö/asiakas                 - user
+Trimmaus                        - scissors
+Lemmikkihotelli                 - house
+Vastaanotto / eläinlääkäri      - activity ?
+Rokotukset                      - shield
+Mikrosirut                      - cpu
+
+Osoite                          - map-pin
+Puh/päivystys                   - phone-call
+Sähköposti                      - at-sign
+
+
+
+Kirurgia                        - 
+Hammashoito                     - 

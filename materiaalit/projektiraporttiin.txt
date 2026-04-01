@@ -24,7 +24,7 @@ https://github.com/ForestMaiden/polarpets_tiimi13b/blob/main/materiaalit/tiimib_
 Sivukartta
 
 1.	Etusivu - index.html (hero, ajanvaraus CTA, päivystys, palvelukolmijako, asiakas)
-    2.	Eläinlääkäri - .html (vastaanoto, rokotukset, hammashoito, kirurgia, mikrosiru)
+    2.	Eläinlääkäri - .html (vastaanotto, rokotukset, hammashoito, kirurgia, mikrosiru)
     3.	Lemmikkihotelli - html (kodinomainen lemmikkihotelli)
     4.	Trimmaus - .html (trimmaus ja päivähoito)
     5.	Hinnasto - .html (suuntaa-antavat hinnat palveluittain)
