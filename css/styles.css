@@ -178,7 +178,10 @@ p {
     padding: 1.5rem;
     box-shadow: 0 2px 5px var(--pets-shadow);
     margin-bottom: 1.5rem;
-    height: fit-content;
+    /*height: fit content;*/
+    break-inside: avoid;                    /* Prevents card from splitting across columns */
+    display: inline-block;
+    width: 100%;
 }
 .service-card:hover,
 .service-card:focus {
@@ -503,6 +506,26 @@ tr :nth-child(4) {
 @media (min-width: 768px) {
     .layout-two {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Two Column - Masonry style */
+.layout-two-masonry {
+    column-count: 2;
+    column-gap: 2rem;
+}
+/* Mobile: single column */
+@media (max-width: 768px) {
+    .layout-two-masonry {
+        column-count: 1;
+    }
+}
+
+
+/* Desktop: 2 columns */
+@media (min-width: 992px) {
+    .layout-two {
+        column-count: 2;
     }
 }
 
