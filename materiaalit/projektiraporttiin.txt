@@ -52,14 +52,19 @@ OK -merkin läpäistyään tarkistuksen/katselmoinnin.
 Tyyliohje, design system ja Design Rationale
 
 Tyyliohje: https://github.com/ForestMaiden/polarpets_tiimi13b/blob/main/materiaalit/styleguide.html
-2 lauseen design system tähän
-- Käytämme samaa kapeaa & kiinteää navbar + alert kaikilla sivuillamme, 
+Visuaalinen suunta: Aurora-inspiraatio, hieman pehmennetyt muodot.
+Lemmikkien hyvinvointi keskiössä (luotettava, ammattimainen, lämmin) – sivusto tuntuu 
+turvalliselta paikalta.
+
+- Päätimme toteuttaa pohjoisen taikaa huokuvan sivuston, koska Polar Pets ei halunnut 
+kliinistä vaikutelmaa.
+- Päätimme tavoitella modernin minimalistista ulkoasua, koska luo käyttäjälle turvallisuuden
+tuntua.
+- Päätimme käyttää samaa kapeaa & kiinteää navbar + alert kaikilla sivuillamme, 
 koska se helpottaa oleellisimman tiedon sekä CTA:n löytämistä nopeasti.
--
--
--
--
-- Päätös: . Peruste: .
+- Valitsimme fontiksi Roboton, koska se on helppolukuinen ja siististi mukautuva.
+- Päätimme käyttää sekä ikoineita että eläinkuvia, koska ne tukevat miellyttävää 
+käyttökokemusta.
 
 
 SEO ja AI-optimointi toimet
