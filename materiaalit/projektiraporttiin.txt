@@ -58,8 +58,8 @@ turvalliselta paikalta.
 
 - Päätimme toteuttaa pohjoisen taikaa huokuvan sivuston, koska Polar Pets ei halunnut 
 kliinistä vaikutelmaa.
-- Päätimme tavoitella modernin minimalistista ulkoasua, koska luo käyttäjälle turvallisuuden
-tuntua.
+- Päätimme tavoitella modernin minimalistista ulkoasua, koska se luo käyttäjälle 
+turvallisuuden tuntua.
 - Päätimme käyttää samaa kapeaa & kiinteää navbar + alert kaikilla sivuillamme, 
 koska se helpottaa oleellisimman tiedon sekä CTA:n löytämistä nopeasti.
 - Valitsimme fontiksi Roboton, koska se on helppolukuinen ja siististi mukautuva.
