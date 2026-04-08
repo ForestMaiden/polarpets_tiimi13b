@@ -4,7 +4,7 @@ Materiaaleissa icons .svg:
 Henkilö/asiakas                 - user
 Trimmaus                        - scissors
 Lemmikkihotelli                 - house
-Vastaanotto / eläinlääkäri      - activity ?
+Vastaanotto / eläinlääkäri      - stetoskooppi
 Rokotukset                      - shield
 Mikrosirut                      - cpu
 
@@ -14,5 +14,5 @@ Sähköposti                      - at-sign
 
 
 
-Kirurgia                        - 
-Hammashoito                     - 
+Kirurgia                        - activity
+Hammashoito                     - hammasharja
