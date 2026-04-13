@@ -17,12 +17,12 @@
 }
 
 body {
-    background: linear-gradient(45deg, #0B2732 0%, #34E89E, #FF85E4 100%);
+    background: linear-gradient(45deg, #0B2732 0%, #0F3443, #34E89E, #FF85E4 100%);
 }
 
 section {
     padding: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .content-box {
@@ -130,6 +130,12 @@ a {
     font-weight: 600;
     font-style: normal;
     color: var(--polar-white) !important;
+}
+.navbar-brand img {
+    height: 48px;
+    width: auto; /* Maintains aspect ratio */
+    /*margin-right: 0.5rem;
+    vertical-align; middle;*/
 }
 .navbar-nav .nav-link.active {
     color: var(--polar-secondary) !important;
