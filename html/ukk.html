@@ -14,17 +14,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     
-    <style>
-        /* Pieniä lisäyksiä, jotta haitari sopii väreihin */
-        .accordion-button:not(.collapsed) {
-            background-color: var(--pets-s-glow);
-            color: var(--polar-primary);
-        }
-        .accordion-button:focus {
-            border-color: var(--polar-secondary);
-            box-shadow: 0 0 0 0.25rem var(--pets-shadow);
-        }
-    </style>
 </head>
 <body>
     
@@ -61,108 +50,108 @@
     <div class="site-grid">
         <main class="content-area">
             <section class="hero-section">
-                <div class="hero">
-                    <img src="../materiaalit/optimized-images/placeholderkuva.webp" alt="Kuvaava teksti">
-                    <div class="hero-text">
-                        <h1>Usein kysytyt kysymykset</h1>
-                        <p>Olemme koonneet tänne vastauksia yleisimpiin kysymyksiin. Jos et löydä vastausta, olethan meihin yhteydessä!</p>
-                    </div>    
-                </div>
+              <div class="hero">
+                  <img src="../materiaalit/optimized-images/placeholderkuva.webp" alt="Kuvaava teksti">
+                  <div class="hero-text">
+                    <h1>Usein kysytyt kysymykset</h1>
+                    <p>Olemme koonneet tänne vastauksia yleisimpiin kysymyksiin. Jos et löydä vastausta, olethan meihin yhteydessä!</p>
+                  </div>    
+              </div>
             </section>
             
-            <section class="content-box">
-                
-                
+            
+              <section class="content-box">
 
-                <div class="accordion mt-4" id="ukkHaitari">
+                  <div class="accordion mt-4" id="ukkHaitari">
+                      
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Miten varaan ajan eläinlääkärille?
+                          </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" 
+                        data-bs-parent="#ukkHaitari">
+                          <div class="accordion-body">
+                            Voit varata ajan nettisivujemme kautta <a href="ajanvaraus.html">tästä</a> tai soittamalla suoraan 
+                            klinikallemme aukioloaikoina numeroon <a href="tel:+358101234567">010 123 4567</a>. 
+                            Kiireellisissä tapauksissa suosittelemme aina soittamista.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Mitä rokotuksia lemmikkini tarvitsee hoitolaan tullessaan?
+                          </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" 
+                        data-bs-parent="#ukkHaitari">
+                          <div class="accordion-body">
+                            Kaikilla hoitolaan tulevilla lemmikeillä tulee olla voimassa olevat perusrokotukset (koirilla neloisrokote ja rabies, kissoilla kolmoisrokote). Suosittelemme myös koirille kennelyskärokotetta. Rokotustodistus on esitettävä saavuttaessa.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Miten toimin hätätapauksessa aukioloaikojen ulkopuolella?
+                          </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" 
+                        data-bs-parent="#ukkHaitari">
+                          <div class="accordion-body">
+                            Päivystämme ympäri vuorokauden vuoden jokaisena päivänä. Aukioloaikojen ulkopuolella voit soittaa päivystysnumeroomme <a href="tel:+35860012345">0600 123 45</a>. 
+                            Huomioithan, että päivystysaikana käytössä on korotetut hinnat.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                          data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Voinko tuoda omat ruoat lemmikkihotelliin?
+                          </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" 
+                        data-bs-parent="#ukkHaitari">
+                          <div class="accordion-body">
+                            Kyllä voit! Suosittelemme omien ruokien mukaan ottamista, jotta lemmikin vatsa pysyy kunnossa tutulla ruokavaliolla. 
+                            Hoitohintaan sisältyy kuitenkin tarvittaessa laadukas perusruoka.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                          data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Mitkä ovat maksuvaihtoehdot?
+                          </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" 
+                        data-bs-parent="#ukkHaitari">
+                          <div class="accordion-body">
+                            Meillä voit maksaa yleisimmillä pankki- ja luottokorteilla. Tarjoamme myös mahdollisuuden osamaksuun (esim. Svea tai Resurs Bank), 
+                            josta voit kysyä lisää vastaanotossamme. Emme ota vastaan käteistä rahaa.
+                          </div>
+                        </div>
+                      </div>
+
+                    </div> <div class="info-box mt-5">
+                        <h3>Etkö löytänyt vastausta?</h3>
+                        <p>Asiakaspalvelumme auttaa mielellään kaikissa kysymyksissä. Ota yhteyttä puhelimitse tai sähköpostitse.</p>
+                        <a href="yhteystiedot.html" class="btn-secondary">Ota yhteyttä</a>
+                    </div>
                     
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" 
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Miten varaan ajan eläinlääkärille?
-                        </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" 
-                      data-bs-parent="#ukkHaitari">
-                        <div class="accordion-body">
-                          Voit varata ajan nettisivujemme kautta <a href="ajanvaraus.html">tästä</a> tai soittamalla suoraan 
-                          klinikallemme aukioloaikoina numeroon <a href="tel:+358101234567">010 123 4567</a>. 
-                          Kiireellisissä tapauksissa suosittelemme aina soittamista.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Mitä rokotuksia lemmikkini tarvitsee hoitolaan tullessaan?
-                        </button>
-                      </h2>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" 
-                      data-bs-parent="#ukkHaitari">
-                        <div class="accordion-body">
-                          Kaikilla hoitolaan tulevilla lemmikeillä tulee olla voimassa olevat perusrokotukset (koirilla neloisrokote ja rabies, kissoilla kolmoisrokote). Suosittelemme myös koirille kennelyskärokotetta. Rokotustodistus on esitettävä saavuttaessa.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Miten toimin hätätapauksessa aukioloaikojen ulkopuolella?
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" 
-                      data-bs-parent="#ukkHaitari">
-                        <div class="accordion-body">
-                          Päivystämme ympäri vuorokauden vuoden jokaisena päivänä. Aukioloaikojen ulkopuolella voit soittaa päivystysnumeroomme <a href="tel:+35860012345">0600 123 45</a>. 
-                          Huomioithan, että päivystysaikana käytössä on korotetut hinnat.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Voinko tuoda omat ruoat lemmikkihotelliin?
-                        </button>
-                      </h2>
-                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" 
-                      data-bs-parent="#ukkHaitari">
-                        <div class="accordion-body">
-                          Kyllä voit! Suosittelemme omien ruokien mukaan ottamista, jotta lemmikin vatsa pysyy kunnossa tutulla ruokavaliolla. 
-                          Hoitohintaan sisältyy kuitenkin tarvittaessa laadukas perusruoka.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                          Mitkä ovat maksuvaihtoehdot?
-                        </button>
-                      </h2>
-                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" 
-                      data-bs-parent="#ukkHaitari">
-                        <div class="accordion-body">
-                          Meillä voit maksaa yleisimmillä pankki- ja luottokorteilla. Tarjoamme myös mahdollisuuden osamaksuun (esim. Svea tai Resurs Bank), 
-                          josta voit kysyä lisää vastaanotossamme. Emme ota vastaan käteistä rahaa.
-                        </div>
-                      </div>
-                    </div>
-
-                  </div> <div class="info-box mt-5">
-                      <h3>Etkö löytänyt vastausta?</h3>
-                      <p>Asiakaspalvelumme auttaa mielellään kaikissa kysymyksissä. Ota yhteyttä puhelimitse tai sähköpostitse.</p>
-                      <a href="yhteystiedot.html" class="btn-secondary">Ota yhteyttä</a>
-                  </div>
-
-            </section>
+              </section>
+             
         </main>
     </div>
 
