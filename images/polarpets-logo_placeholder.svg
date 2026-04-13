@@ -1,0 +1,15 @@
+<svg width="200" height="200" viewBox="0 0 200 200" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Polar Pets placeholder-logo</title>
+  <desc>Pyöreä placeholder-logo Polar Pets -sivustolle</desc>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="#0B2732"/>
+
+  <!-- Paw pad -->
+  <ellipse cx="100" cy="118" rx="32" ry="26" fill="#34E89E"/>
+
+  <!-- Toe beans -->
+  <circle cx="74" cy="88" r="13" fill="#34E89E"/>
+  <circle cx="100" cy="81" r="13" fill="#34E89E"/>
+  <circle cx="126" cy="88" r="13" fill="#34E89E"/>
+</svg>
