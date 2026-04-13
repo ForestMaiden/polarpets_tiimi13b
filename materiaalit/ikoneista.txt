@@ -3,7 +3,7 @@ Kahlasin bootstrapin ikonikirjaston -> ei juur parempia kuin ladattu valikoima.
 Materiaaleissa icons .svg:
 Henkilö/asiakas                 - user
 Trimmaus                        - scissors
-Lemmikkihotelli                 - house
+Lemmikkihotelli                 - home
 Vastaanotto / eläinlääkäri      - stetoskooppi
 Rokotukset                      - shield
 Mikrosirut                      - cpu

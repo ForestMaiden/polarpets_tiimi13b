@@ -291,8 +291,8 @@ a {
 
 .icon-control{
     /* asettelu? & koko, tehdään tarvittaessa useampi (.icon-control2 jne) */
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
     margin-bottom: 1rem;
     color: var(--polar-secondary);
 }

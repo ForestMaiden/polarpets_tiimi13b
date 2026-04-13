@@ -68,7 +68,9 @@ käyttökokemusta.
 
 
 SEO ja AI-optimointi toimet
-
+- Huolehdimme otsikoiden, metadatan ja alt-tekstien hyvästä kuvailevuudesta, jotka
+parantavat löydettävyyttä.
+-
 
 
 Tarkistimme saavutettavuuden ja responsiivisuuden osalta
