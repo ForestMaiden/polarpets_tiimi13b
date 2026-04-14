@@ -295,11 +295,11 @@ a {
 /* --- INFO-BOX | FORM --- */
 /* Vaihtoehto kortille. Korostettu tieto, aukioloajat, päivystystiedot, yms. */
 .info-box {
-    background-color: var(--polar-white);
+    background-color: var(--pets-mask);
     border-left: 4px solid var(--pets-s-glow);
     padding: 1rem 1.5rem;
     border-radius: 5px;
-    margin: 1rem 0;
+    margin: 3rem;
 }
 /* Käytä: Yhteydenottolomake, ajanvarauspyyntö. Kentät selkeät ja helppolukuiset. */
 .form-input {
@@ -323,9 +323,11 @@ a {
 table {
     table-layout: fixed;
     width: 90%;
-    margin: 10px auto;
-    border-collapse: collapse;
-    border: none;
+    margin-bottom: 3rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 5px;
+    overflow: hidden;
 }
 thead {
     background-color: var(--polar-secondary);
@@ -334,24 +336,25 @@ tbody tr:nth-child(odd) {       /* 2n+1 ("odd"=parittomat), 2n (parilliset) */
     background-color: var(--pets-s-glow);
 }
 tbody tr:nth-child(even) {       /* 2n+1 ("odd"=parittomat), 2n ("even"=parilliset) */
-    background-color: var(--polar-light);
+    background-color: var(--polar-secondary);
 }
 caption {
-    padding: 1em;
-    background: var(--polar-light);
+    padding: 1rem;
+    background: var(--pets-mask);
+    color: var(--polar-white);
+    font-weight: 500;
     font-size: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
     caption-side: top;
 }
 th,
 td {
-    vertical-align: top;
-    padding: 0.3em;
+    vertical-align: middle;
+    padding: 1rem;
 }
-tr :nth-child(1),
-tr :nth-child(2),
-tr :nth-child(4) {
+tr :nth-child(2) {
   text-align: center;
-  width: 11%;
+  width: 50%;
 }
 
 /* --- FOOTER --- */
