@@ -118,6 +118,9 @@ li {
     color: var(--polar-white);
     text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
+ul {
+    margin-bottom: 2rem;
+}
 
 a {
     color: var(--polar-secondary);
@@ -202,7 +205,7 @@ a {
 /* --- CARDS (service-card styleguidessa) --- */
 
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
-.service-card{
+.service-card {
     background: var(--pets-mask);
     border-radius: 5px;
     padding: 1.5rem;
@@ -216,6 +219,7 @@ a {
 .service-card:focus {
     box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
 }
+
 /* Käytä vain kotisivulla */
 .index-card{
     background-color: var(--pets-mask);
@@ -238,29 +242,21 @@ a {
     text-align: center;
     margin-bottom: 1rem;
     width: 100%;
-    padding: 2rem;
-    border-radius: 7.5px;
-    margin-bottom: 1rem;
+    padding: 1.5rem;
 }
-/* .index-card h3 {
-    text-align: center;
-    margin-bottom: 1rem;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 5px;
-    
-    background-image: url('images/card-pattern.svg');
-    background-size: cover;
-    background-position: center;
-    color: var(--polar-white);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-} */
 .index-card p {
     text-align: center;
 }
 .index-card .btn-primary,
 .index-card .btn-secondary {
     margin-top: auto;
+}
+
+.icon {
+    display: block;
+    height: 72px;
+    width: auto;
+    color: var(--polar-secondary);
 }
 
 .testimonial-card {
@@ -293,14 +289,6 @@ a {
     text-shadow: 0 2px 4px rgba(0,0,0,0.8);
     text-align: center;
     margin-top: 0.5rem;
-}
-
-.icon-control{
-    /* asettelu? & koko, tehdään tarvittaessa useampi (.icon-control2 jne) */
-    width: 64px;
-    height: 64px;
-    margin-bottom: 1rem;
-    color: var(--polar-secondary);
 }
 
 
