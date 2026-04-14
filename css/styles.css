@@ -153,6 +153,59 @@ a {
     transition: color 0.3s ease;
 }
 
+/* --- UKK --- Ylikirjoitettu ja täydennetty bootstrap */
+.accordion {
+    margin-bottom: 3rem;
+}
+.accordion-item {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0.5rem;
+    max-width: 542px;
+}
+/* The clickable button/header */
+.accordion-button {
+    background: var(--pets-mask);
+    color: var(--polar-white) !important;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding: 1.25rem 3rem 1.25rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none !important;
+    transition: all 0.3s ease;
+}
+.accordion-button.collapsed:hover {
+    box-shadow: 0 0 15px var(--polar-secondary), 0 0 30px var(--pets-s-glow) !important;
+}
+.accordion-button:not(.collapsed) {
+    background: var(--pets-mask);
+    color: var(--polar-secondary) !important;
+    border-radius: 5px 5px 0 0;
+}
+/* The arrow icon */
+.accordion-button::after {
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(35%) saturate(2061%) hue-rotate(100deg) brightness(96%) contrast(92%);  /* Makes arrow secondary color when open */
+}
+.accordion-body {
+    background: var(--pets-mask);
+    color: var(--polar-white);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    padding: 1.5rem;
+    border-radius: 0 0 5px 5px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.accordion-header {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
 
 /* --- BUTTONS --- */
 /* Käytä CTA:han (Varaa aika) */
@@ -221,13 +274,12 @@ a {
 }
 
 /* Käytä vain kotisivulla */
-.index-card{
+.index-card {
     background-color: var(--pets-mask);
     border-radius: 5px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     max-width: 320px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -299,7 +351,10 @@ a {
     border-left: 4px solid var(--pets-s-glow);
     padding: 1rem 1.5rem;
     border-radius: 5px;
-    margin: 3rem;
+    margin-bottom: 3rem;
+}
+.info-box p {
+    margin-bottom: auto;
 }
 /* Käytä: Yhteydenottolomake, ajanvarauspyyntö. Kentät selkeät ja helppolukuiset. */
 .form-input {
@@ -317,7 +372,6 @@ a {
     outline: none;
     border-color: var(--polar-primary);
 }
-
 
 /* --- TABLE --- Hinnastoa varten */
 table {
@@ -487,6 +541,8 @@ tr :nth-child(2) {
     border-radius: 5px;
     overflow: hidden;
     min-height: 400px;                  /* ← CRITICAL: Ensures container is tall enough */
+    /*width: 100vw;
+    margin-left: calc(50% - 50vw);*/ 
 }
 
 .hero img {
@@ -494,7 +550,7 @@ tr :nth-child(2) {
     height: 100%;
     object-fit: cover;
     object-position: center 30%;
-    border-radius: 8px;
+    border-radius: 5px;
     position: absolute;                 /* ← Image becomes background */
     top: 0;
     left: 0;
