@@ -13,7 +13,7 @@ Molempien alitiimien tavoitteena on arvosana 5.
 
 TIIMI 13B
 
-Julkaisu: 
+Julkaisu: https://forestmaiden.github.io/polarpets_tiimi13b/index.html
 Repo: https://github.com/ForestMaiden/polarpets_tiimi13b
 Projektinhallintataulu: https://trello.com/b/vTMn1D4j/13-alitiimi-b-polar-pets
 Wireframet: 
@@ -23,14 +23,14 @@ https://github.com/ForestMaiden/polarpets_tiimi13b/blob/main/materiaalit/tiimib_
 
 Sivukartta
 
-1.	Etusivu - index.html (hero, ajanvaraus CTA, päivystys, palvelukolmijako, asiakas)
-    2.	Eläinlääkäri - .html (vastaanotto, rokotukset, hammashoito, kirurgia, mikrosiru)
-    3.	Lemmikkihotelli - html (kodinomainen lemmikkihotelli)
-    4.	Trimmaus - .html (trimmaus ja päivähoito)
-    5.	Hinnasto - .html (suuntaa-antavat hinnat palveluittain)
-    6.	UKK - .html (usein kysytyt kysymykset ja vastaukset niihin)
-    7.	Yhteystiedot - .html (yhteystiedot + päivystys, aukiolo, yhteydenottolomake, kartta)
-    8.  Ajanvaraus (ei toteuteta/placeholder)
+1.	Etusivu - index.html (hero, ajanvaraus CTA, päivystys, palvelukolmijako, asiakaspalaute)
+    2.	Eläinlääkäri - alinlaakari.html (vastaanotto, rokotukset, hammashoito, kirurgia, mikrosirut)
+    3.	Lemmikkihotelli - lemmikkihotelli.html (kodinomainen lemmikkihotelli)
+    4.	Trimmaus - trimmaus.html (trimmaus ja päivähoito)
+    5.	Hinnasto - hinnasto.html (suuntaa-antavat hinnat palveluittain)
+    6.	UKK - ukk.html (usein kysytyt kysymykset ja vastaukset niihin)
+    7.	Yhteystiedot - yhteystiedot.html (yhteystiedot + päivystys, aukiolo, yhteydenottolomake, kartta)
+    8.  Ajanvaraus (tyhjä ajanvaraus.html)
 
 
 Roolit & työnjako
@@ -95,8 +95,10 @@ grafiikka-aineisto (valmiit tiedostot + lyhyt selite)
 
 Poster / one-pager
 
-linkki julkaistuun sivustoon
+Julkaisu: https://forestmaiden.github.io/polarpets_tiimi13b/index.html
+
 kuvakaappaus etusivusta
+
 Kohdeyleisö: Lemmikkien omistajat (koirat, kissat ja pieneläimet), jotka etsivät 
 luotettavaa eläinlääkäripalvelua tai hoitopaikkaa sekä uudet lemmikinomistajat, 
 jotka tarvitsevat tietoa peruspalveluista (rokotukset, mikrosiru, sterilisaatio).
@@ -111,12 +113,11 @@ Saavutettavuusvalinta: (1)
 MUISTIINPANOT
 
 Visualinen ilme: 
-•	Revontulet, hillitty, vaalea oletus /pohja, modernin minimalistinen. 
+•	Revontulet, hillitty, modernin minimalistinen. 
 •	Värit ja niiden käyttö: 60 %, 30 % ja 10 % sivustolla + ripaus pohjoisen taikaa.
 •	Muodot: vähän pehmennetty.
 Luotettava, lämmin, eläinystävällinen. Ammattimainen mutta ei kliininen. Lemmikit ja niiden 
 hyvinvointi keskiössä – sivuston pitää tuntua turvalliselta paikalta.
-Päivystys ehdottomasti ennemmin headeriin kuin footeriin.
 
 --------------------------------------------------------------------------------------
 
