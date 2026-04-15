@@ -74,11 +74,11 @@ parantavat löydettävyyttä.
 
 
 Tarkistimme saavutettavuuden ja responsiivisuuden osalta
-
+-
 
 
 Vertaisarvioinnin palaute tiimiltä 1 ja tekemämme muutokset
-
+-
 
 
 Miten tekoälyä käytettiin (mihin ja millä tavalla, 2-5 riviä)
