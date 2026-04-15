@@ -238,7 +238,7 @@ a {
     color: var(--polar-white);
     text-shadow: 0 2px 4px rgba(0,0,0,0.8);
     padding: 0.5rem 1.5rem;
-    border: 2px solid var(--pets-a-glow);
+    border: 3px solid var(--pets-a-glow);
     border-radius: 5px;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 400;
@@ -542,7 +542,7 @@ tr :nth-child(2) {
     overflow: hidden;
     min-height: 400px;                  /* ← CRITICAL: Ensures container is tall enough */
     /*width: 100vw;
-    margin-left: calc(50% - 50vw);*/ 
+    margin-left: calc(50% - 50vw);*/
 }
 
 .hero img {
