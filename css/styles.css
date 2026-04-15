@@ -81,8 +81,8 @@ h2 {
 
 h3 {
     font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 500; /* Medium */
-    font-size: 1.25rem; /* 20px */
+    font-weight: 600; /* Medium */
+    font-size: 1.5rem; /* 24px */
     color: var(--polar-white);
     text-shadow: 0 2px 4px var(--pets-shadow);
     line-height: 1.4;
