@@ -52,11 +52,13 @@
 
             <section class="hero-section">
                 <div class="hero">
-                    <img src="../materiaalit/optimized-images/placeholderkuva.webp" alt="Ihminen halaamassa vanhaa kultaistanoutajaa. Taustalla on kukkulainen metsämaisema.">
+                    <img src="../materiaalit/optimized-images/placeholderkuva.webp" alt="Muuta tämä teksti!">
                     <div class="hero-text">
                         <h1>Yhteystiedot</h1>
-                        
-                        <a href="html/ajanvaraus.html" class="btn-primary">Varaa aika</a>
+                        <p>Löydät meidät Tampereen sydämestä hyvien kulkuyhteyksien varrelta. 
+                            Palvelemme lemmikkiäsi kaikissa elämänvaiheissa, vuoden jokaisena 
+                            päivänä ja vuorokauden ympäri.</p>
+                        <a href="ajanvaraus.html" class="btn-primary">Varaa aika</a>
                     </div>    
                 </div>
             </section>
@@ -64,38 +66,71 @@
 
                 <section class="contact-details">
                     <div class="layout-two">
-                        <div class="opening-hours">
-                            <h3>Aukioloajat</h3>
-                                <dl>
-                                    <dt>Ma-Pe</dt>
-                                    <dd>09:00 - 17:00</dd>
-                                    <dt>Lauantai</dt>
-                                    <dd>09:00 - 16:00</dd>
-                                    <dt>Sunnuntai</dt>
-                                    <dd>10:00 - 15:00</dd>
-                                </dl>
+                        <div class="contact-column-left">
+                            <div class="service-card">
+                                <h3>Yhteystiedot</h3>
+                                <address>
+                                    <ul>
+                                        <li>📍 Kuntokatu 3, 33520 Tampere</li>
+                                        <li><a href="tel:+35860012345">📞 0600 123 45 (Päivystys 24/7)</a></li>
+                                        <li><a href="tel:+358101234567">☎️ 010 123 4567</a></li>
+                                        <li><a href="mailto:info@polarpets.fi">✉️ info@polarpets.fi</a></li>
+                                    </ul>
+                                </address>
+                            </div>
+                            <div class="service-card">
+                                <h3>Aukioloajat</h3>
+                                    <dl>
+                                        <dt>Ma-Pe</dt>
+                                        <dd>09:00 - 17:00</dd>
+                                        <dt>Lauantai</dt>
+                                        <dd>09:00 - 16:00</dd>
+                                        <dt>Sunnuntai</dt>
+                                        <dd>10:00 - 15:00</dd>
+                                    </dl>
+                            </div>
+                            
+                            <div class="map service-card">
+                                <h3>Löydä perille</h3>
+                                <figure>
+                                    <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1847.601446755452!2d23.80582527743477!3d61.49880819198651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468edf4276707471%3A0x673c66f500096652!2sKuntokatu%203%2C%2033520%20Tampere!5e0!3m2!1sfi!2sfi!4v1715845000000!5m2!1sfi!2sfi" 
+                                    width="100%" 
+                                    height="300" 
+                                    style="border:0; border-radius: 5px;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Polar Pets sijainti kartalla">
+                                    </iframe>
+                                </figure>
+                            </div>
                         </div>
+                    
+                        <div class="contact-column-right">
+                            <div class="contact-form service-card">
+                                <h3>Ota yhteyttä</h3>
+                                <p>Onko sinulla kysyttävää? 
+                                <br> 
+                                Täytä oheinen lomake, niin palaamme asiaan mahdollisimman pian.
+                                </p>
+                                <form action="#" method="post">
+                                        <div class="form-group">
+                                            <label for="name">Nimi:</label>
+                                            <input type="text" id="name" name="kayttajan_nimi" class="form-input" placeholder="Kirjoita nimesi" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Sähköposti:</label>
+                                            <input type="email" id="email" name="kayttajan_sahkoposti" class="form-input" placeholder="esimerkki@email.fi" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message">Viesti:</label>
+                                            <textarea id="message" name="viesti" class="form-input" rows="5" placeholder="Kirjoita viestisi tähän..." required></textarea>
+                                        </div>
 
-                        <div class="phone-numbers">
-                            <h3>Puhelinnumerot</h3>
-                            <p>☎️ Klinikan aukioloaikoina: <a href="tel:+358101234567">010 123 4567</a></p>
-                            <p>📞 Päivystysnumero 24/7: <a href="tel:+35860012345">0600 123 45</a></p>
-                        </div>
-
-                        <div class="map">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1868.5!2d23.758654!3d61.501723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468ed8a90e587127%3A0xc424c40773091301!2sKuntokatu%203%2C%2033520%20Tampere!5e0!3m2!1sfi!2sfi!4v1234567890"
-                                width="100%" 
-                                height="300" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy"
-                                title="Polar Pets sijainti kartalla">
-                            </iframe>
-                        </div>
-
-                        <div class="contact-form">
-
+                                        <button type="submit" class="btn-primary">Lähetä</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </section>
