@@ -339,6 +339,7 @@ a {
     padding: 1rem 1.5rem;
     border-radius: 5px;
     margin-bottom: 3rem;
+    max-width: 600px;
 }
 .info-box p {
     margin-bottom: auto;
