@@ -348,7 +348,7 @@ a {
 /* Vaihtoehto kortille. Korostettu tieto, aukioloajat, päivystystiedot, yms. */
 .info-box {
     background-color: var(--pets-mask);
-    border-left: 4px solid var(--pets-s-glow);
+    border-left: 4px solid var(--pets-a-glow);
     padding: 1rem 1.5rem;
     border-radius: 5px;
     margin-bottom: 3rem;
@@ -356,6 +356,41 @@ a {
 .info-box p {
     margin-bottom: auto;
 }
+.info-box a {
+    transition: all 0.3s ease;
+    display: inline-block; /* Necessary for transform to work */
+}
+.info-box a:hover,
+.info-box a:focus {
+    transform: scale(1.1);
+}
+.info-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.info-box ul li {
+    margin-bottom: 0.5rem;
+}
+.info-box dl {
+    color: var(--polar-white);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;    /* Label takes what it needs, time fills rest */
+    gap: 0rem 1.5rem;                   /* vertical horizontal */
+}
+.info-box dt {
+    font-weight: 500;
+    text-align: left;
+}
+.info-box dd {
+    text-align: left;
+}
+.info-box iframe {
+    
+}
+
 /* Käytä: Yhteydenottolomake, ajanvarauspyyntö. Kentät selkeät ja helppolukuiset. */
 .form-input {
     width: 100%;
