@@ -387,25 +387,50 @@ a {
 .info-box dd {
     text-align: left;
 }
-.info-box iframe {
-    
-}
+
 
 /* Käytä: Yhteydenottolomake, ajanvarauspyyntö. Kentät selkeät ja helppolukuiset. */
+.contact-form-container {
+    background-color: var(--pets-mask);
+    padding: 2rem;
+    border: 2px solid var(--pets-a-glow);
+    border-radius: 5px;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--polar-white);
+}
 .form-input {
+    background-color: rgba(255, 255, 255, 0.1);
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid var(--pets-border);
+    border: 2px solid transparent;
     border-radius: 5px;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-size: 1rem;
-    color: var(--polar-text-body);
-    transition: border-color 0.3s ease;
-    margin-bottom: 1rem;
+    color: var(--polar-white);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 .form-input:focus {
     outline: none;
-    border-color: var(--polar-primary);
+    border-color: var(--polar-secondary);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+textarea.form-input {
+    resize: vertical;
+    min-height: 120px;
+}
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+.form-input:focus::placeholder {
+    color: rgba(255, 255, 255, 0.3);
 }
 
 /* --- TABLE --- Hinnastoa varten */
