@@ -14,25 +14,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color: var(--polar-white);
     background: linear-gradient(45deg, #0B2732 0%, #0F3443, #34E89E, #FF85E4 100%);
 }
-
 section {
     padding: 0.5rem;
     margin-bottom: 2rem;
-}
-
-.content-box {
-    justify-items: center;
-}
-
-/* --- BOOTSTRAP AREAS --- */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 
@@ -46,76 +35,59 @@ header {
 /* Functional colors */
     --pets-shadow: rgba(0,0,0,0.8);     /* Varjo esim. tekstille */
     --pets-s-shadow: rgba(0,0,0,0.6);   /* Pehmeä varjo esim. hinnastoon */
-    --pets-mask: rgba(0,0,0,0.40);      /* Pohja tekstille */
+    --pets-mask: rgba(0,0,0,0.4);       /* Pohja tekstille */
     --pets-s-glow: #91F3CA ;            /* Hienovarainen muutos, hover/activ/etc. */
     --pets-a-glow: #FF85E4 ;            /* Hienovarainen muutos, hover/activ/etc. */
 }
 
-/* --- GRADIENTS for backgrounds ---
-linear-gradient(45deg, var(--polar-secondary) 0%, var(--pets-a-glow) 100%);
-linear-gradient(135deg, var(--polar-light) 0%, var(--pets-s-glow) 100%);
-linear-gradient(90deg, var(--polar-accent) 0%, var(--pets-a-glow) 100%);
-linear-gradient(180deg, var(--polar-light) 0%, transparent 100%);
-*/
 
 /* --- TYPOGRAPHY --- Headings - Roboto ExtraBold/Bold/Medium for hierarchy */
-h1 {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 800; /* ExtraBold */
-    font-size: 2.5rem; /* 40px */
-    color: var(--polar-white);
+h1, h2, h3, p, ul, li {
     text-shadow: 0 2px 4px var(--pets-shadow);
+}
+h1 {
+    font-weight: 800;       /* ExtraBold */
+    font-size: 2.5rem;      /* 40px */
     line-height: 1.2;
     margin-bottom: 1rem;
 }
-
 h2 {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 700; /* Bold */
-    font-size: 2rem; /* 32px */
-    color: var(--polar-white);
-    text-shadow: 0 2px 4px var(--pets-shadow);
+    font-weight: 700;       /* Bold */
+    font-size: 2rem;        /* 32px */
     line-height: 1.3;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
-
 h3 {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 600; /* Medium */
-    font-size: 1.5rem; /* 24px */
-    color: var(--polar-white);
-    text-shadow: 0 2px 4px var(--pets-shadow);
+    font-weight: 600;       /* Medium */
+    font-size: 1.5rem;      /* 24px */
     line-height: 1.4;
     margin-bottom: 0.5rem;
 }
-
 /* Body text - Roboto Regular for readability */
 p {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 400; /* Regular */
-    font-size: 1rem; /* 16px */
-    color: var(--polar-white);
-    text-shadow: 0 2px 4px var(--pets-shadow);
+    font-weight: 400;       /* Regular */
+    font-size: 1rem;        /* 16px */
     line-height: 1.6;
     margin-bottom: 1rem;
 }
 
-ul,
-li {
-    color: var(--polar-white);
-    text-shadow: 0 2px 4px var(--pets-shadow);
-}
 ul {
     margin-bottom: 2rem;
 }
-
 a {
     color: var(--polar-secondary);
     text-decoration: none;
 }
 
-/* --- NAVBAR --- Ylikirjoitettu bootstrap. Itse navbar löytyy styleguide.html */
+
+/* --- NAVBAR --- Ylikirjoitettu bootstrap */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 .navbar-brand {
     font-family: "Stylish", Helvetica, Arial, sans-serif;
     font-weight: 600;
@@ -124,22 +96,23 @@ a {
 }
 .navbar-brand img {
     height: 48px;
-    width: auto; /* Maintains aspect ratio */
+    width: auto;
     /*margin-right: 0.5rem;
     vertical-align; middle;*/
-}
-.navbar-nav .nav-link.active {
-    color: var(--polar-secondary) !important;
-    font-weight: 600; /* Korostus */
-}
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
-    color: var(--pets-s-glow) !important;
 }
 .navbar-nav .nav-link {
     color: var(--polar-white) !important;
     transition: color 0.3s ease;
 }
+.navbar-nav .nav-link.active {
+    color: var(--polar-secondary) !important;
+    font-weight: 600;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--pets-s-glow) !important;
+}
+
 
 /* --- UKK --- Ylikirjoitettu ja täydennetty bootstrap */
 .accordion {
@@ -155,7 +128,6 @@ a {
 .accordion-button {
     background: var(--pets-mask);
     color: var(--polar-white) !important;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 500;
     font-size: 1.125rem;
     padding: 1.25rem 3rem 1.25rem 1.5rem;
@@ -182,11 +154,10 @@ a {
 }
 .accordion-body {
     background: var(--pets-mask);
-    color: var(--polar-white);
     text-shadow: 0 2px 4px var(--pets-shadow);
     padding: 1.5rem;
     border-radius: 0 0 5px 5px;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color: var(--polar-white);
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -195,61 +166,65 @@ a {
     margin-bottom: 0 !important;
 }
 
+
 /* --- BUTTONS --- */
-/* Käytä CTA:han (Varaa aika) */
-.btn-primary {
+.btn-primary,
+.btn-secondary {
     display: inline-block;
-    background-color: var(--polar-accent);
     color: var(--polar-white);
     text-shadow: 0 2px 4px var(--pets-shadow);
     padding: 0.5rem 1.5rem;
-    border: none;
     border-radius: 5px;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     width: fit-content;
+}
+
+/* Käytä CTA:han (Varaa aika) */
+.btn-primary {
+    background-color: var(--polar-accent);
+    border: 3px solid transparent;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 .btn-primary:hover,
 .btn-primary:focus {
     background-color: var(--polar-accent);
-    border: var(--pets-a-glow);
-    color: var(--polar-white);
+    border: 3px solid var(--pets-a-glow);
     box-shadow: 0 0 15px var(--pets-a-glow), 0 0 30px var(--pets-a-glow);
 }
+
 /* Käytä toissijaisiin asioihin (Lue lisää, tms.) */
 .btn-secondary {
-    display: inline-block;
     background-color: transparent;
-    color: var(--polar-white);
-    text-shadow: 0 2px 4px var(--pets-shadow);
-    padding: 0.5rem 1.5rem;
     border: 3px solid var(--pets-a-glow);
-    border-radius: 5px;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 400;
-    text-decoration: none;
-    cursor: pointer;
     transition: all 0.3s ease;
-    width: fit-content;
 }
 .btn-secondary:hover,
 .btn-secondary:focus {
-    background-color: transparent;
-    color: var(--polar-white);
+    background-color: var(--polar-accent);
     box-shadow: 0 0 15px var(--pets-a-glow), 0 0 30px var(--pets-a-glow);
 }
 
 
-/* --- CARDS (service-card styleguidessa) --- */
-
-/* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
-.service-card {
+/* --- CARDS & INFO-BOX --- */
+.service-card,
+.index-card,
+.testimonial-card,
+.info-box {
     background: var(--pets-mask);
     border-radius: 5px;
     padding: 1.5rem;
+}
+
+.icon {
+    height: 72px;
+    width: auto;
+    color: var(--polar-secondary);
+}
+
+/* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
+.service-card {
     margin-bottom: 1.5rem;
     break-inside: avoid;                    /* Prevents card from splitting across columns */
     display: inline-block;
@@ -262,15 +237,11 @@ a {
 
 /* Käytä vain kotisivulla */
 .index-card {
-    background-color: var(--pets-mask);
-    border-radius: 5px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
     max-width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all 0.3s ease;   
+    transition: all 0.3s ease;
 }
 .index-card:hover,
 .index-card:focus {
@@ -279,8 +250,6 @@ a {
 }
 .index-card h3 {
     text-align: center;
-    margin-bottom: 1rem;
-    width: 100%;
     padding: 1.5rem;
 }
 .index-card p {
@@ -291,17 +260,9 @@ a {
     margin-top: auto;
 }
 
-.icon {
-    display: block;
-    height: 72px;
-    width: auto;
-    color: var(--polar-secondary);
-}
-
 .testimonial-card {
-    background: var(--pets-mask);
-    border-radius: 5px;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 .testimonial-card img {
@@ -311,33 +272,24 @@ a {
     border-radius: 7.5px;
 }
 .testimonial-card blockquote {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-size: 1.125rem;
     font-style: italic;
-    color: var(--polar-white);
     text-shadow: 0 2px 4px var(--pets-shadow);
     line-height: 1.7;
     text-align: center;
     position: relative;
 }
 .testimonial-card figcaption {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     font-weight: 500;
-    color: var(--polar-white);
     text-shadow: 0 2px 4px var(--pets-shadow);
     text-align: center;
     margin-top: 0.5rem;
 }
 
-
-/* --- INFO-BOX | FORM --- */
 /* Vaihtoehto kortille. Korostettu tieto, aukioloajat, päivystystiedot, yms. */
 .info-box {
-    background-color: var(--pets-mask);
     border-left: 4px solid var(--pets-a-glow);
-    padding: 1rem 1.5rem;
-    border-radius: 5px;
     margin-bottom: 3rem;
     max-width: 600px;
 }
@@ -346,7 +298,7 @@ a {
 }
 .info-box a {
     transition: all 0.3s ease;
-    display: inline-block; /* Necessary for transform to work */
+    display: inline-block;              /* Necessary for transform to work */
 }
 .info-box a:hover,
 .info-box a:focus {
@@ -361,12 +313,11 @@ a {
     margin-bottom: 0.5rem;
 }
 .info-box dl {
-    color: var(--polar-white);
     text-shadow: 0 2px 4px var(--pets-shadow);
     margin: 0;
     display: grid;
-    grid-template-columns: auto 1fr;    /* Label takes what it needs, time fills rest */
-    gap: 0rem 1.5rem;                   /* vertical horizontal */
+    grid-template-columns: auto 1fr;
+    gap: 0rem 1.5rem;
 }
 .info-box dt {
     font-weight: 500;
@@ -380,6 +331,8 @@ a {
     border-radius: 7.5px;
 }
 
+
+/* --- FORM --- */
 /* Käytä: Yhteydenottolomake, ajanvarauspyyntö. Kentät selkeät ja helppolukuiset. */
 .contact-form-container {
     background-color: var(--pets-mask);
@@ -394,7 +347,6 @@ a {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: var(--polar-white);
 }
 .form-input {
     background-color: rgba(255, 255, 255, 0.1);
@@ -402,9 +354,7 @@ a {
     padding: 0.75rem;
     border: 2px solid transparent;
     border-radius: 5px;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-size: 1rem;
-    color: var(--polar-white);
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 .form-input:focus,
@@ -425,6 +375,7 @@ textarea.form-input {
     color: rgba(255, 255, 255, 0.3);
 }
 
+
 /* --- TABLE --- Hinnastoa varten */
 table {
     table-layout: fixed;
@@ -437,16 +388,13 @@ table {
 }
 thead {
     background-color: var(--pets-shadow);
-    color: var(--polar-white);
 }
-tbody tr:nth-child(odd) {       /* 2n+1 ("odd"=parittomat), 2n (parilliset) */
+tbody tr:nth-child(odd) {                           /* 2n+1 ("odd"=parittomat) */
     background-color: var(--pets-mask);
-    color: var(--polar-white);
     text-shadow: 0 2px 4px var(--pets-shadow);
 }
-tbody tr:nth-child(even) {       /* 2n+1 ("odd"=parittomat), 2n ("even"=parilliset) */
+tbody tr:nth-child(even) {                          /* 2n+1 ("even"=parilliset) */
     background-color: var(--pets-s-shadow);
-    color: var(--polar-white);
     text-shadow: 0 2px 4px var(--pets-shadow);
 }
 caption {
@@ -468,15 +416,13 @@ tr :nth-child(2) {
   width: 50%;
 }
 
+
 /* --- FOOTER --- */
 /* Käytä samaa tummaa footeria vaalealla tekstillä kaikilla sivuillamme
    MUISTA laittaa <p class="footer", että teksti toimii kuten pitää. */
 .footer {
     background-color: var(--polar-primary);
-    color: var(--polar-white);
     padding: 1rem;
-    border-radius: 5px 5px 0 0;
-    margin-top: 2rem;
 }
 .footer-wrapper {
     display: grid;
@@ -574,7 +520,7 @@ tr :nth-child(2) {
 
 /* --- SITE-WIDE GRID LAYOUTS --- */
 
-/* Page wrapper - contains everything except navbar/carousel */
+/* Page wrapper - contains everything except navbar */
 .site-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -582,6 +528,10 @@ tr :nth-child(2) {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+}
+
+.content-box {
+    justify-items: center;
 }
 
 /* --- LAYOUT TEMPLATES --- */
@@ -601,7 +551,6 @@ tr :nth-child(2) {
     /*width: 100vw;
     margin-left: calc(50% - 50vw);*/
 }
-
 .hero img {
     width: 100%;
     height: 100%;
@@ -634,7 +583,6 @@ tr :nth-child(2) {
     margin-top: 1.5rem;
     font-size: 1rem;
 }
-
 
 @media (min-width: 768px) {
     .hero {
@@ -714,4 +662,3 @@ tr :nth-child(2) {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-
