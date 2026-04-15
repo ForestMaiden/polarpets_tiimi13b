@@ -44,7 +44,8 @@ header {
     --polar-secondary: #34E89E;         /* 30% Tausta, korostus, tekstinä primary päälle. */
     --polar-accent: #FF1DCE;            /* 10% Tausta, korostus, tekstinä primary päälle. */
 /* Functional colors */
-    --pets-shadow: rgba(0,0,0,0.8);     /* Pehmeä varjo esim. tekstille */
+    --pets-shadow: rgba(0,0,0,0.8);     /* Varjo esim. tekstille */
+    --pets-s-shadow: rgba(0,0,0,0.6);   /* Pehmeä varjo esim. hinnastoon */
     --pets-mask: rgba(0,0,0,0.40);      /* Pohja tekstille */
     --pets-s-glow: #91F3CA ;            /* Hienovarainen muutos, hover/activ/etc. */
     --pets-a-glow: #FF85E4 ;            /* Hienovarainen muutos, hover/activ/etc. */
@@ -434,17 +435,22 @@ table {
     overflow: hidden;
 }
 thead {
-    background-color: var(--polar-secondary);
+    background-color: var(--pets-shadow);
+    color: var(--polar-white);
 }
 tbody tr:nth-child(odd) {       /* 2n+1 ("odd"=parittomat), 2n (parilliset) */
-    background-color: var(--pets-s-glow);
+    background-color: var(--pets-mask);
+    color: var(--polar-white);
+    text-shadow: 0 2px 4px var(--pets-shadow);
 }
 tbody tr:nth-child(even) {       /* 2n+1 ("odd"=parittomat), 2n ("even"=parilliset) */
-    background-color: var(--polar-secondary);
+    background-color: var(--pets-s-shadow);
+    color: var(--polar-white);
+    text-shadow: 0 2px 4px var(--pets-shadow);
 }
 caption {
     padding: 1rem;
-    background: var(--pets-mask);
+    background: var(--pets-s-shadow);
     color: var(--polar-white);
     font-weight: 500;
     font-size: 1rem;
