@@ -502,8 +502,12 @@ tr :nth-child(2) {
 }
 
 .footer h3 {
-    /*margin-top: 0;*/
     margin-bottom: 1rem;
+}
+@media (min-width: 600px) {
+    .footer h3 {
+    padding-top: 2rem;
+    }
 }
 .footer a {
     transition: all 0.3s ease;
