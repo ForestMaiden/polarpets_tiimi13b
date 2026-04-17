@@ -20,9 +20,9 @@
 :root {
 /* Color palette - Aurora inspired */
     --polar-white: #FFF;                /* Puhdas valkoinen tekstille */            
-    --polar-primary: #0B2732;           /* 60% Tausta, sopii kaikkien kanssa. */
+    --polar-primary: #0B2732;           /* Tausta, sopii kaikkien kanssa. */
     --polar-secondary: #34E89E;         /* 30% Tausta, korostus, tekstinä primary päälle. */
-    --polar-accent: #FF1DCE;            /* 10% Tausta, korostus, tekstinä primary päälle. */
+    --polar-accent: #FF1DCE;            /* 10% Tausta, CTA, tekstinä primary päälle. */
 /* Functional colors */
     --pets-shadow: rgba(0,0,0,0.8);     /* Varjo esim. tekstille */
     --pets-s-shadow: rgba(0,0,0,0.6);   /* Pehmeä varjo esim. hinnastoon */
@@ -280,7 +280,7 @@ header {
 }
 .testimonial-card img {
     width: 100%;
-    height: clamp(200px, 30vw, 350px);
+    height: clamp(200px, 55vw, 350px);
     object-fit: cover;
     border-radius: 7.5px;
 }

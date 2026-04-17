@@ -3,205 +3,263 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Polar Pets - Eläinklinikka ja -hoitola</title>
-        <meta name="description" content="Polar Pets on eläinklinikka ja hoitola, joka tarjoaa 
-                    eläinlääkäripalveluja, lemmikkihotellin ja trimmauspalvelut. Meillä paras ystäväsi on hyvissä käsissä.">
+        <title>Polar Pets - Tyyliohje</title>
+        <meta name="description" content="Polar Pets eläinklinikan ja -hoitolan visuaalinen tyyliohje. Aurora-inspiroitu tumma teema, luotettava ja lämmin tunnelma.">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-                rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
-            /* --- CSS VARIABLES (COLORS) --- */
+            /* --- CSS RESET --- */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* --- CSS VARIABLES --- */
             :root {
             /* Color palette - Aurora inspired */
-            --polar-white: #FFF;                /* Puhdas valkoinen esim. kortteihin ja logoon*/            
-            --polar-light: #F5FFFB;             /* 60% Tausta, tekstinä vain tumman päällä. TAI #DCEFF7 #EBFDF5 #FF39FA */
-            --polar-primary: #0B2732;           /* 60% Tausta, otsikot, sopii kaikkien kanssa. */
-            --polar-secondary: #34E89E;         /* 30% Tausta, korostus, tekstinä primary päälle. */
-            --polar-accent: #FF1DCE;            /* 10% Tausta, korostus, tekstinä primary päälle. */
-            --polar-text-body: #0F3443;         /* Leipätekstille, EI accent päälle (3.97:1)! */
+                --polar-white: #FFF;                /* Puhdas valkoinen tekstille */            
+                --polar-primary: #0B2732;           /* Tausta, sopii kaikkien kanssa. */
+                --polar-secondary: #34E89E;         /* 30% Tausta, korostus, tekstinä primary päälle. */
+                --polar-accent: #FF1DCE;            /* 10% Tausta, korostus, tekstinä primary päälle. */
             /* Functional colors */
-            --pets-border: #BCE2F0;             /* Hienovarainen reunus */
-            --pets-shadow: rgba(0,0,0,0.08);    /* Pehmeä varjo */
-            --pets-mask: rgba(0,0,0,0.40);      /* Kuvien päällä olevalle tekstille */
-            --pets-s-glow: #91F3CA ;            /* Hienovarainen muutos, hover/activ/etc. */
-            --pets-a-glow: #FF85E4 ;            /* Hienovarainen muutos, hover/activ/etc. */
-        }
-            /* --- BODY STYLING (Ei ole pysyvä osa meidän tyyliä) --- */
+                --pets-shadow: rgba(0,0,0,0.8);     /* Varjo esim. tekstille */
+                --pets-s-shadow: rgba(0,0,0,0.6);   /* Pehmeä varjo esim. hinnastoon */
+                --pets-mask: rgba(0,0,0,0.4);       /* Pohja tekstille */
+                --pets-s-glow: #91F3CA ;            /* Hienovarainen muutos, hover/activ/etc. */
+                --pets-a-glow: #FF85E4 ;            /* Hienovarainen muutos, hover/activ/etc. */
+            }
+
             body {
                 font-family: "Roboto", Helvetica, Arial, sans-serif;
-                background-color: var(--polar-light);
-                color: var(--polar-text-body);
+                color: var(--polar-white);
+                background: linear-gradient(45deg, var(--polar-primary) 0%, var(--polar-secondary), var(--pets-a-glow) 100%);
                 padding: 2rem;
                 line-height: 1.6;
-            }            
-            /* Ylikirjoitettu bootstrap. Navbar löytyy bodysta */
+            }
+
+            /* --- TYPOGRAPHY --- */
+            h1, h2, h3, p, ul, li {
+                text-shadow: 0 2px 4px var(--pets-shadow);
+            }
+            h1 {
+                font-weight: 800;       /* ExtraBold */
+                font-size: 2.5rem;      /* 40px */
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+            h2 {
+                font-weight: 700;       /* Bold */
+                font-size: 2rem;        /* 32px */
+                line-height: 1.3;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+            h3 {
+                font-weight: 600;       /* Medium */
+                font-size: 1.5rem;      /* 24px */
+                line-height: 1.4;
+                margin-bottom: 0.5rem;
+            }
+            p {
+                font-weight: 400;       /* Regular */
+                font-size: 1rem;        /* 16px */
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+            a {
+                color: var(--polar-secondary);
+                text-decoration: none;
+            }
+
+            /* --- NAVBAR STYLING --- */
+            .navbar {
+                background-color: var(--polar-primary);
+                position: relative;
+                margin-bottom: 2rem;
+            }
             .navbar-brand {
                 font-family: "Stylish", Helvetica, Arial, sans-serif;
+                font-size: 1.5rem;
                 font-weight: 600;
                 font-style: normal;
                 color: var(--polar-white) !important;
             }
+            .navbar-brand img {
+                height: 50px;
+                width: auto;
+                margin-right: 0.5rem;
+            }
+            .navbar-nav .nav-link {
+                color: var(--polar-white) !important;
+                transition: color 0.3s ease;
+            }
             .navbar-nav .nav-link.active {
                 color: var(--polar-secondary) !important;
-                font-weight: 600; /* Korostus */
+                font-weight: 600;
             }
             .navbar-nav .nav-link:hover,
             .navbar-nav .nav-link:focus {
                 color: var(--pets-s-glow) !important;
             }
-            .navbar-nav .nav-link {
-                color: var(--polar-light) !important;
-                transition: color 0.3s ease;
-            }
-            /* HUOM! Merkitse aktiivinen sivu läpi sivuston
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="html/klinikka.html">Klinikka</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="html/trimmaus-hoitola.html">Trimmaus-hoitola</a>
-                </li>
-                <!-- etc -->
-            </ul> */
 
-            /* --- TYPOGRAPHY --- Headings - Roboto ExtraBold/Bold/Medium for hierarchy */
-            h1 {
-                font-family: "Roboto", Helvetica, Arial, sans-serif;
-                font-weight: 800; /* ExtraBold */
-                font-size: 2.5rem; /* 40px */
-                color: var(--polar-primary);
-                line-height: 1.2;
-                margin-bottom: 1rem;
-            }
-
-            h2 {
-                font-family: "Roboto", Helvetica, Arial, sans-serif;
-                font-weight: 700; /* Bold */
-                font-size: 2rem; /* 32px */
-                color: var(--polar-primary);
-                line-height: 1.3;
-                margin-top: 2rem;
-                margin-bottom: 1rem;
-            }
-
-            h3 {
-                font-family: "Roboto", Helvetica, Arial, sans-serif;
-                font-weight: 700;
-                font-size: 1.5rem; /* 24px */
-                color: var(--polar-primary);
-                line-height: 1.4;
-                margin-bottom: 0.5rem;
-            }
-
-            h4 {
-                font-family: "Roboto", Helvetica, Arial, sans-serif;
-                font-weight: 500; /* Medium */
-                font-size: 1.25rem; /* 20px */
-                color: var(--polar-text-body);
-                line-height: 1.4;
-                margin-bottom: 0.5rem;
-            }
-            /* Body text - Roboto Regular for readability */
-            p {
-                font-family: "Roboto", Helvetica, Arial, sans-serif;
-                font-weight: 400; /* Regular */
-                font-size: 1rem; /* 16px */
-                color: var(--polar-text-body);
-                line-height: 1.6;
-                margin-bottom: 1rem;
-            }
             /* --- BUTTONS --- */
-            /* Käytä CTA:han (Varaa aika) */
-            .btn-primary {
+            .btn-primary,
+            .btn-secondary {
                 display: inline-block;
-                background-color: var(--polar-accent);
-                color: var(--polar-primary);
+                color: var(--polar-white);
+                text-shadow: 0 2px 4px var(--pets-shadow);
                 padding: 0.5rem 1.5rem;
-                border: none;
                 border-radius: 5px;
-                font-family: "Roboto", Helvetica, Arial, sans-serif;
-                font-weight: 500;
-                text-decoration: none;
                 cursor: pointer;
-                transition: background-color 0.3s ease;
                 width: fit-content;
+            }
+
+            /* Primary button - pääasiallinen CTA */
+            .btn-primary {
+                background-color: var(--polar-accent);
+                border: 3px solid transparent;
+                font-weight: 500;
+                transition: background-color 0.3s ease;
             }
             .btn-primary:hover,
             .btn-primary:focus {
                 background-color: var(--polar-accent);
-                color: var(--polar-primary);
+                border: 3px solid var(--pets-a-glow);
                 box-shadow: 0 0 15px var(--pets-a-glow), 0 0 30px var(--pets-a-glow);
             }
-            /* Käytä toissijaisiin asioihin (Lue lisää, tms.) */
+
+            /* Secondary button - toissijaiset toiminnot */
             .btn-secondary {
-                display: inline-block;
                 background-color: transparent;
-                color: var(--polar-primary);
-                padding: 0.5rem 1.5rem;
-                border: 2px solid var(--polar-accent);
-                border-radius: 5px;
-                font-family: "Roboto", Helvetica, Arial, sans-serif;
-                font-weight: 400;
-                text-decoration: none;
-                cursor: pointer;
+                border: 3px solid var(--pets-a-glow);
+                font-weight: 500;
                 transition: all 0.3s ease;
-                width: fit-content;
             }
             .btn-secondary:hover,
             .btn-secondary:focus {
-                background-color: transparent;
-                color: var(--polar-primary);
+                background-color: var(--polar-accent);
                 box-shadow: 0 0 15px var(--pets-a-glow), 0 0 30px var(--pets-a-glow);
             }
-            /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
-            .service-card{
-                background-color: var(--polar-white);
-                border: 1px solid var(--pets-s-glow);
+
+            /* --- CARDS --- */
+            .service-card,
+            .index-card,
+            .testimonial-card,
+            .info-box {
+                background: var(--pets-mask);
                 border-radius: 5px;
                 padding: 1.5rem;
-                box-shadow: 0 2px 5px var(--pets-shadow);
-                margin-bottom: 1.5rem;
-                height: fit-content;
             }
-            .service-card:hover,
-            .service-card:focus {
+
+            .service-card {
+                margin-bottom: 1.5rem;
+                transition: all 0.3s ease;
+            }
+            .service-card:hover {
                 box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
             }
-            /* Vaihtoehto kortille. Korostettu tieto, aukioloajat, päivystystiedot, yms. */
-            .info-box {
-                background-color: var(--polar-white);
-                border-left: 4px solid var(--pets-s-glow);
-                padding: 1rem 1.5rem;
-                border-radius: 5px;
-                margin: 1rem 0;
+
+            .index-card {
+                max-width: 320px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: all 0.3s ease;
             }
-            /* Yhteydenottolomake, Yhteydenottolomake, ajanvarauspyyntö. 
-               Kentät selkeät ja helppolukuiset. */
+            .index-card:hover {
+                transform: scale(1.025);
+                box-shadow: 0 0 15px var(--polar-secondary), 0 0 30px var(--pets-s-glow);    
+            }
+            .index-card h3 {
+                text-align: center;
+                padding: 1.5rem;
+            }
+            .index-card p {
+                text-align: center;
+            }
+
+            .testimonial-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .testimonial-card blockquote {
+                font-size: 1.125rem;
+                font-style: italic;
+                text-shadow: 0 2px 4px var(--pets-shadow);
+                line-height: 1.7;
+                text-align: center;
+            }
+            .testimonial-card figcaption {
+                font-size: 1rem;
+                font-weight: 500;
+                text-shadow: 0 2px 4px var(--pets-shadow);
+                text-align: center;
+                margin-top: 0.5rem;
+            }
+
+            /* --- INFO BOX --- */
+            .info-box {
+                border-left: 4px solid var(--pets-a-glow);
+                margin-bottom: 2rem;
+                max-width: 600px;
+            }
+            .info-box strong {
+                color: var(--pets-s-glow);
+            }
+            .info-box a {
+                transition: all 0.3s ease;
+                display: inline-block;
+            }
+            .info-box a:hover {
+                transform: scale(1.1);
+            }
+
+            /* --- FORM --- */
+            .contact-form-container {
+                background-color: var(--pets-mask);
+                padding: 2rem;
+                border: 4px solid var(--pets-a-glow);
+                border-radius: 5px;
+                max-width: 600px;
+            }
+            .form-group {
+                margin-bottom: 1.5rem;
+            }
+            .form-group label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+                text-shadow: 0 2px 4px var(--pets-shadow);
+            }
             .form-input {
+                background-color: rgba(255, 255, 255, 0.1);
                 width: 100%;
                 padding: 0.75rem;
-                border: 1px solid var(--pets-border);
+                border: 2px solid transparent;
                 border-radius: 5px;
-                font-family: "Roboto", Helvetica, Arial, sans-serif;
                 font-size: 1rem;
-                color: var(--polar-text-body);
-                transition: border-color 0.3s ease;
-                margin-bottom: 1rem;
+                color: var(--polar-white);
+                transition: border-color 0.3s ease, background-color 0.3s ease;
             }
-            .form-input:focus {
+            .form-input:focus,
+            .form-input:hover {
                 outline: none;
-                border-color: var(--polar-primary);
+                border-color: var(--polar-secondary);
+                background-color: rgba(255, 255, 255, 0.15);
             }
-            /* Käytä samaa footeria kaikilla sivuillamme*/
+            .form-input::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            /* --- FOOTER --- */
             .footer {
                 background-color: var(--polar-primary);
-                color: var(--polar-light);
                 padding: 1rem;
-                border-radius: 5px 5px 0 0;
-                margin-top: 2rem;
             }
             .footer-wrapper {
                 display: grid;
@@ -214,13 +272,15 @@
                 gap: 1.5rem;
                 max-width: 1200px;
                 margin: 0 auto;
+                justify-items: center;
             }
-            @media (min-width: 720px) {
+
+            @media (min-width: 600px) {
                 .footer-wrapper {
                     grid-template-columns: 1fr 1fr;
                     grid-template-areas:
-                        "logo hours"
-                        ". contact"
+                        "logo logo"
+                        "contact hours"
                         "copyright copyright";
                 }
             }
@@ -246,24 +306,35 @@
                 grid-area: copyright;
                 text-align: center;
                 padding-top: 1rem;
-                border-top: 1px solid var(--pets-s-glow);
+                position: relative;
+                width: 100%;
+            }
+            .footer-copyright::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: clamp(344px, 100%, 1200px);
+                height: 1px;
+                background-color: var(--pets-s-glow);
             }
 
-            .footer h4 {
-                color: var(--polar-light);
-                margin-top: 0;
+            .footer h3 {
                 margin-bottom: 1rem;
             }
+            @media (min-width: 600px) {
+                .footer h3 {
+                padding-top: 2rem;
+                }
+            }
             .footer a {
-                color: var(--polar-secondary);
-                text-decoration: none;
                 transition: all 0.3s ease;
-                display: inline-block; /* Necessary for transform to work */
+                display: inline-block;
             }
             .footer a:hover,
             .footer a:focus {
                 transform: scale(1.1);
-                /* text-shadow: 0 0 10px var(--polar-secondary); */
             }
             .footer ul {
                 list-style: none;
@@ -276,8 +347,8 @@
             .footer dl {
                 margin: 0;
                 display: grid;
-                grid-template-columns: auto 1fr;    /* Label takes what it needs, time fills rest */
-                gap: 1rem 1.5rem;                   /* vertical horizontal */
+                grid-template-columns: auto 1fr;
+                gap: 0rem 1.5rem;
             }
             .footer dt {
                 font-weight: 500;
@@ -286,84 +357,140 @@
             .footer dd {
                 text-align: left;
             }
-            /* --- STYLE GUIDE SECTIONS --- (Ei ole osa meidän tyyliä) */
+
+            /* --- STYLEGUIDE SPECIFIC STYLES --- */
+            .component-section {
+                background: var(--pets-mask);
+                padding: 2rem;
+                border-radius: 5px;
+                margin-bottom: 2rem;
+            }
+            .usage-note {
+                background: rgba(52, 232, 158, 0.1);
+                border-left: 3px solid var(--polar-secondary);
+                padding: 0.75rem 1rem;
+                margin-top: 1rem;
+                font-style: italic;
+                font-size: 0.9rem;
+            }
             .color-swatch {
                 display: inline-block;
                 width: 100px;
                 height: 100px;
                 border-radius: 5px;
-                margin-right: 1rem;
-                margin-bottom: 1rem;
-                border: 2px solid var(--pets-border);
+                margin: 0.5rem;
+                border: 2px solid var(--polar-white);
             }
-            .component-section {
-                background-color: var(--polar-white);
-                padding: 2rem;
-                border-radius: 5px;
-                margin-bottom: 2rem;
-                border: 1px solid var(--pets-border);
+            .color-grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin: 1rem 0;
             }
-            .usage-note {
-                background-color: var(--polar-light);
-                padding: 0.5rem 1rem;
-                border-left: 3px solid var(--polar-secondary);
+            .color-item {
+                text-align: center;
+            }
+            .color-label {
                 margin-top: 0.5rem;
                 font-size: 0.9rem;
-                font-style: italic;
             }
         </style>
     </head>
     <body>
-
-        <h1>🐾 Polar Pets - Tyyliohje</h1>
-        <p><strong>Visuaalinen suunta:</strong> Aurora-inspiraatio.<br>Luotettava, lämmin, eläinystävällinen. 
-            Ammattimainen mutta ei kliininen.<br>Lemmikit ja niiden hyvinvointi keskiössä – sivusto tuntuu turvalliselta 
-            paikalta.
-        </p>
-
-        <hr>
+        <header class="component-section">
+            <h1>Polar Pets - Tyyliohje</h1>
+            <p><strong>Visuaalinen suunta:</strong> Aurora-inspiraatio, ammattimainen, luotettava, lämmin</p>
+            <p><strong>Tunnelma:</strong> Eläinystävällinen ja turvallinen - lemmikit keskiössä</p>
+        </header>
 
         <!-- VÄRIPALETTI -->
         <section class="component-section">
-            <h2>Väripaletti</h2>
+            <h2>Väripaletti - Aurora</h2>
             <p>CSS-muuttujat määritelty <code>:root</code>-tasolla. Käytä näitä kaikkialla sivustolla.</p>
-            
-            <div>
-                <div class="color-swatch" style="background-color: var(--polar-white);"></div>
-                <strong>--polar-white</strong>
-                <small>Kortit, logo, puhdas valkoinen</small>
+            <h3>Päävärit</h3>
+            <div class="color-grid">
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: var(--polar-white);"></div>
+                    <div class="color-label">
+                        <strong>Polar White</strong><br>
+                        #FFF<br>
+                        Teksti
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: var(--polar-primary);"></div>
+                    <div class="color-label">
+                        <strong>Polar Primary</strong><br>
+                        #0B2732<br>
+                        Tausta
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: var(--polar-secondary);"></div>
+                    <div class="color-label">
+                        <strong>Polar Secondary</strong><br>
+                        #34E89E<br>
+                        30% - Korostus
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: var(--polar-accent);"></div>
+                    <div class="color-label">
+                        <strong>Polar Accent</strong><br>
+                        #FF1DCE<br>
+                        10% - CTA
+                    </div>
+                </div>
             </div>
 
-            <div>
-                <div class="color-swatch" style="background-color: var(--polar-light);"></div>
-                <strong>--polar-light</strong>
-                <small>Tausta, tekstinä vain tumman päällä</small>
+            <h3>Toiminnalliset värit</h3>
+            <div class="color-grid">
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: var(--pets-shadow);"></div>
+                    <div class="color-label">
+                        <strong>Shadow</strong><br>
+                        rgba(0,0,0,0.8)<br>
+                        Tekstivarjo
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: var(--pets-s-shadow);"></div>
+                    <div class="color-label">
+                        <strong>Soft Shadow</strong><br>
+                        rgba(0,0,0,0.6)<br>
+                        Pehmeä varjo
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: var(--pets-mask);"></div>
+                    <div class="color-label">
+                        <strong>Mask</strong><br>
+                        rgba(0,0,0,0.4)<br>
+                        Korttipohja
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: var(--pets-s-glow);"></div>
+                    <div class="color-label">
+                        <strong>Secondary Glow</strong><br>
+                        #91F3CA<br>
+                        Hover-efekti
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: var(--pets-a-glow);"></div>
+                    <div class="color-label">
+                        <strong>Accent Glow</strong><br>
+                        #FF85E4<br>
+                        Hover-efekti
+                    </div>
+                </div>
             </div>
 
-            <div>
-                <div class="color-swatch" style="background-color: var(--polar-primary);"></div>
-                <strong>--polar-primary</strong>
-                <small>Otsikot, footer, sopii kaikkien värien kanssa</small>
-            </div>
-
-            <div>
-                <div class="color-swatch" style="background-color: var(--polar-secondary);"></div>
-                <strong>--polar-secondary</strong>
-                <small>Korostus, aktiivinen tila, vihreä aurora</small>
-            </div>
-
-            <div>
-                <div class="color-swatch" style="background-color: var(--polar-accent);"></div>
-                <strong>--polar-accent</strong>
-                <small>CTA-painikkeet, magenta aurora</small>
-            </div>
-
-            <div>
-                <div class="color-swatch" style="background-color: var(--polar-text-body);"></div>
-                <strong>--polar-text-body</strong>
-                <small>Leipätekstille, EI accent päälle (3.97:1)!</small>
-            </div>
-
+            <p class="usage-note">
+                <strong>Käyttö:</strong> Tumma aurora-teema. Kaikki teksti polar-white värillä, text-shadow tekstin luettavuuteen. 
+                Gradient-tausta: primary → secondary → accent glow.
+            </p>
         </section>
 
         <!-- TYPOGRAFIA -->
@@ -371,52 +498,51 @@
             <h2>Typografia</h2>
             
             <h3>Logo-fontti: Stylish</h3>
-            <p class="navbar-brand" style="font-size: 2rem;">🟢 Polar Pets</p>
+            <p class="navbar-brand" style="font-size: 2rem;">Polar Pets</p>
             <p class="usage-note">Käyttö: Vain logo/brändinimi. Ei muualla tekstissä.</p>
 
             <h3>Otsikot ja leipäteksti: Roboto</h3>
-            <h1>Otsikko H1 - ExtraBold 800, 2.5rem</h1>
-            <h2>Otsikko H2 - Bold 700, 2rem</h2>
-            <h3>Otsikko H3 - Bold 700, 1.5rem</h3>
-            <h4>Otsikko H4 - Medium 500, 1.25rem</h4>
-            <p>Leipäteksti - Regular 400, 1rem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div style="margin: 1.5rem 0;">
+                <h1>Otsikko H1 - ExtraBold 800, 2.5rem (40px)</h1>
+                <h2>Otsikko H2 - Bold 700, 2rem (32px)</h2>
+                <h3>Otsikko H3 - Medium 600, 1.5rem (24px)</h3>
+                <p>Leipäteksti - Regular 400, 1rem (16px). Kaikki teksti käyttää text-shadow: 0 2px 4px var(--pets-shadow) luettavuuden parantamiseksi tumman taustan päällä.</p>
+            </div>
+            <p class="usage-note">Kaikki otsikot ja teksti käyttävät text-shadow-efektiä luettavuuteen tumman taustan päällä.</p>
         </section>
-        
+
         <!-- NAVIGAATIO -->
         <section class="component-section">
             <h2>Navigaatio (Navbar)</h2>
             
-            <nav class="navbar navbar-expand-lg navbar-dark" 
-            style="background-color: var(--polar-primary); border-radius: 0px 0px 5px 5px;">
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
-                    <!-- Logo -->
-                    <a class="navbar-brand" href="index.html">🟢 Polar Pets</a>
-                    <!-- CTA visible on mobile only (before hamburger) -->
-                    <a href="html/ajanvaraus.html" class="btn btn-primary d-lg-none ms-auto me-2">Varaa aika</a>
-                    <!-- Hamburger toggle (shows on mobile) -->
+                    <a class="navbar-brand" href="#">Polar Pets</a>
+                    <a href="#" class="btn-primary d-lg-none ms-auto me-2">Varaa aika</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                             data-bs-target="#navbarNav" aria-controls="navbarNav" 
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <!-- Collapsible links -->
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link active" href="index.html">Etusivu</a></li>
-                            <li class="nav-item"><a class="nav-link" href="html/elainlaakari.html">Eläinlääkäri</a></li>
-                            <li class="nav-item"><a class="nav-link" href="html/lemmikkihotelli.html">Lemmikkihotelli</a></li>
-                            <li class="nav-item"><a class="nav-link" href="html/trimmaus.html">Trimmaus</a></li>
-                            <li class="nav-item"><a class="nav-link" href="html/hinnasto.html">Hinnasto</a></li>
-                            <li class="nav-item"><a class="nav-link" href="html/ukk.html">UKK</a></li>
-                            <li class="nav-item"><a class="nav-link" href="html/yhteystiedot.html">Yhteystiedot</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">Etusivu</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Eläinlääkäri</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Lemmikkihotelli</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Trimmaus</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Hinnasto</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">UKK</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Yhteystiedot</a></li>
                         </ul>
                     </div>
-                    <!-- CTA visible on desktop only (inside collapsed menu area, pushes right) -->
-                    <a href="html/ajanvaraus.html" class="btn-primary d-none d-lg-inline-block ms-3">Varaa aika</a>
+                    <a href="#" class="btn-primary d-none d-lg-inline-block ms-3">Varaa aika</a>
                 </div>
             </nav>
 
-            <p class="usage-note">Käyttö: Sama navigaatio kaikilla sivuilla. Aktiivinen sivu korostettu --polar-secondary värillä.</p>
+            <p class="usage-note">
+                <strong>Käyttö:</strong> Sticky position, sama kaikilla sivuilla. Aktiivinen sivu korostettu --polar-secondary värillä. 
+                Hover-efekti: --pets-s-glow. Responsiivinen: mobiilissa "Varaa aika" ennen hampurilaisvalikkoa, desktopissa oikealla.
+            </p>
         </section>
 
         <!-- PAINIKKEET -->
@@ -425,31 +551,71 @@
             
             <h3>Primary Button</h3>
             <a href="#" class="btn-primary">Varaa aika</a>
-            <p class="usage-note">Käyttö: Pääasiallinen CTA (call-to-action). Esim. ajanvaraus, yhteydenotto.</p>
+            <p class="usage-note">
+                <strong>Käyttö:</strong> Pääasiallinen CTA (call-to-action). Esim. ajanvaraus, yhteydenotto.<br>
+                <strong>Tyyli:</strong> --polar-accent tausta, 3px transparent border. Hover: border muuttuu --pets-a-glow, glow-efekti.
+            </p>
 
-            <h3>Secondary Button</h3>
+            <h3 style="margin-top: 2rem;">Secondary Button</h3>
             <a href="#" class="btn-secondary">Lue lisää</a>
-            <p class="usage-note">Käyttö: Toissijaiset toiminnot. Esim. "Lue lisää", "Katso palvelut".</p>
+            <p class="usage-note">
+                <strong>Käyttö:</strong> Toissijaiset toiminnot. Esim. "Lue lisää", "Katso palvelut".<br>
+                <strong>Tyyli:</strong> Läpinäkyvä tausta, 3px --pets-a-glow border. Hover: --polar-accent tausta, glow-efekti.
+            </p>
         </section>
 
-        <!-- KORTIT -->
+        <!-- CARDS -->
         <section class="component-section">
-            <h2>Kortti (Card)</h2>
+            <h2>Cards</h2>
             
-            <div class="service-card" style="max-width: 300px;">
-                <h3>Eläinklinikka</h3>
+            <h3>Index</h3>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <div class="index-card">
+                    <h3>Eläinklinikka</h3>
+                    <p>Meiltä löydät kaikki lemmikkisi hoitoon tarvittavat eläinlääkäripalvelut.</p>
+                    <a href="#" class="btn-primary">Lue lisää</a>
+                </div>
+                <div class="index-card">
+                    <h3>Lemmikkihotelli</h3>
+                    <p>Turvallinen ja viihtyisä hoitopaikka lemmikillesi loman tai työmatkan ajaksi.</p>
+                    <a href="#" class="btn-secondary">Lue lisää</a>
+                </div>
+            </div>
+            <p class="usage-note">
+                <strong>Käyttö:</strong> index-card kun korttia halutaan korostaa (klinikka/hotelli/trimmaus).<br>
+                <strong>Tyyli:</strong> Max-width 320px, flexbox column, centered. Hover: scale(1.025) + glow. Painike bottom-aligned.
+            </p>
+
+            <h3 style="margin-top: 2rem;">Service</h3>
+            <div class="service-card" style="max-width: 400px;">
+                <h3>Eläinlääkäripalvelut</h3>
                 <p>Meiltä löydät kaikki lemmikkisi hoitoon tarvittavat eläinlääkäripalvelut:</p>
                 <ul>
-                    <li>Vastaanotto</li>
-                    <li>Rokotukset</li>
+                    <li>Vastaanotto ja terveystarkastukset</li>
+                    <li>Rokotukset ja loistentorjunta</li>
                     <li>Hammashoito</li>
-                    <li>Kirurgia</li>
-                    <li>Mikrosirut</li>
+                    <li>Kirurgia ja kastraatiot</li>
+                    <li>Mikrosirut ja rekisteröinti</li>
                 </ul>
                 <a href="#" class="btn-secondary">Lue lisää</a>
             </div>
+            <p class="usage-note">
+                <strong>Käyttö:</strong> Palveluiden esittely sisältösivuilla.<br>
+                <strong>Tyyli:</strong> --pets-mask tausta, hover: secondary glow. Break-inside: avoid (masonry-layoutissa).
+            </p>
 
-            <p class="usage-note">Käyttö: Palveluiden esittely, henkilöprofiilit, asiakassuositukset. Sisältö pysyy siististi kortissa.</p>
+            <h3 style="margin-top: 2rem;">Testimonial</h3>
+            <div class="testimonial-card" style="max-width: 500px;">
+                <blockquote>
+                    "Polar Pets on hoitanut Pörröä syntymästä lähtien. Henkilökunta on aina ystävällistä ja 
+                    ammattitaitoista. Suosittelen lämpimästi!"
+                </blockquote>
+                <figcaption>— Essi & Pörrö</figcaption>
+            </div>
+            <p class="usage-note">
+                <strong>Käyttö:</strong> Asiakaspalautteet ja suositukset.<br>
+                <strong>Tyyli:</strong> Flexbox column centered, italic blockquote, figcaption testimonian lähde.
+            </p>
         </section>
 
         <!-- INFO BOX -->
@@ -457,31 +623,47 @@
             <h2>Info Box</h2>
             
             <div class="info-box">
-                <h4>Tärkeä huomio</h4>
-                <p>Päivystys avoinna 24/7. Hätätapauksissa soita: 044 123 4567</p>
+                <h4>📞 Päivystys 24/7</h4>
+                <p><strong>Hätätapauksissa soita:</strong> <a href="tel:+35860012345">0600 123 45</a></p>
+                <p>Päivystys avoinna ympäri vuorokauden kaikille eläinlääkäripalveluita tarvitseville.</p>
             </div>
 
-            <p class="usage-note">Käyttö: Korostettu tieto, aukioloajat, päivystystiedot, varoitukset.</p>
+            <p class="usage-note">
+                <strong>Käyttö:</strong> Korostettu tieto, aukioloajat, yhteystiedot, tärkeitä huomioita.<br>
+                <strong>Tyyli:</strong> Border-left: 4px --pets-a-glow. Strong-teksti: --pets-s-glow. Link hover: scale(1.1).
+            </p>
         </section>
 
-        <!-- LOMAKKEET -->
+        <!-- LOMAKE -->
         <section class="component-section">
-            <h2>Lomake-elementit</h2>
+            <h2>Yhteydenottolomake</h2>
             
-            <form>
-                <label for="name">Nimi:</label>
-                <input type="text" id="name" class="form-input" placeholder="Kirjoita nimesi">
+            <div class="contact-form-container">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nimi:</label>
+                        <input type="text" id="name" class="form-input" placeholder="Kirjoita nimesi">
+                    </div>
 
-                <label for="email">Sähköposti:</label>
-                <input type="email" id="email" class="form-input" placeholder="esimerkki@email.fi">
+                    <div class="form-group">
+                        <label for="email">Sähköposti:</label>
+                        <input type="email" id="email" class="form-input" placeholder="esimerkki@email.fi">
+                    </div>
 
-                <label for="message">Viesti:</label>
-                <textarea id="message" class="form-input" rows="4" placeholder="Kirjoita viestisi tähän"></textarea>
+                    <div class="form-group">
+                        <label for="message">Viesti:</label>
+                        <textarea id="message" class="form-input" rows="4" placeholder="Kirjoita viestisi tähän"></textarea>
+                    </div>
 
-                <button type="submit" class="btn-primary">Lähetä</button>
-            </form>
+                    <button type="submit" class="btn-primary">Lähetä</button>
+                </form>
+            </div>
 
-            <p class="usage-note">Käyttö: Yhteydenottolomake, ajanvarauspyyntö. Kentät selkeät ja helppolukuiset.</p>
+            <p class="usage-note">
+                <strong>Käyttö:</strong> Yhteydenottolomake, ajanvarauspyyntö.<br>
+                <strong>Tyyli:</strong> 4px --pets-a-glow border, --pets-mask tausta. Input: rgba(255,255,255,0.1) tausta, 
+                focus: --polar-secondary border.
+            </p>
         </section>
 
         <!-- FOOTER -->
@@ -491,11 +673,11 @@
             <footer class="footer">
                 <div class="footer-wrapper">
                     <div class="footer-logo">
-                        <img src="images/" alt="">
+                        <h3>Polar Pets</h3>
                     </div>
                     <div class="footer-contact">
+                        <h3>Yhteystiedot</h3>
                         <address>
-                            <h4>Polar Pets -eläinklinikka</h4>
                             <ul>
                                 <li>📍 Kuntokatu 3, 33520 Tampere</li>
                                 <li><a href="tel:+35860012345">📞 0600 123 45 (Päivystys 24/7)</a></li>
@@ -505,27 +687,31 @@
                         </address>
                     </div>
                     <div class="footer-opening-hours">
-                        <h4>Aukioloajat</h4>
-                            <dl>
-                                <dt>Ma-Pe</dt>
-                                <dd>09:00 - 17:00</dd>
-                                <dt>Lauantai</dt>
-                                <dd>09:00 - 16:00</dd>
-                                <dt>Sunnuntai</dt>
-                                <dd>10:00 - 15:00</dd>
-                            </dl>
+                        <h3>Aukioloajat</h3>
+                        <dl>
+                            <dt>Ma-Pe</dt>
+                            <dd>09:00 - 17:00</dd>
+                            <dt>Lauantai</dt>
+                            <dd>09:00 - 16:00</dd>
+                            <dt>Sunnuntai</dt>
+                            <dd>10:00 - 15:00</dd>
+                        </dl>
                     </div>
                     <div class="footer-copyright">
-                        <small>Polar Pets  |  Copyright 2026</small>
+                        <small>Polar Pets | Copyright 2026</small>
                     </div>
                 </div>
             </footer>
 
-            <p class="usage-note">Käyttö: Yhtenäinen footer kaikilla sivuilla. Yhteystiedot, aukioloajat, päivystysnumero.</p>
+            <p class="usage-note">
+                <strong>Käyttö:</strong> Yhtenäinen footer kaikilla sivuilla. Yhteystiedot, aukioloajat, päivystysnumero.<br>
+                <strong>Tyyli:</strong> --polar-primary tausta. Grid-layout: mobiili 1 col, tablet 2 col, desktop 3 col. 
+                Link hover: scale(1.1). Copyright: top border --pets-s-glow.
+            </p>
         </section>
 
-        <hr>
-        <p style="text-align: center; color: var(--polar-text-body);"><small>Polar Pets - Tyyliohje 2026 | Projekti: Web-tekniikka ja digitaalinen grafiikka</small></p>
+        <hr style="border: 1px solid var(--pets-s-glow); margin: 2rem 0;">
+        <p style="text-align: center;"><small>Polar Pets - Tyyliohje 2026 | Projekti: Web-tekniikka ja digitaalinen grafiikka</small></p>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     </body>
