@@ -14,15 +14,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    color: var(--polar-white);
-    background: linear-gradient(45deg, #0B2732 0%, #34E89E, #FF85E4 100%);
-}
-section {
-    padding: 0.25rem;
-    margin-bottom: 2rem;
-}
 
 
 /* --- CSS VARIABLES --- */
@@ -40,6 +31,16 @@ section {
     --pets-a-glow: #FF85E4 ;            /* Hienovarainen muutos, hover/activ/etc. */
 }
 
+body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color: var(--polar-white);
+    background: linear-gradient(45deg, var(--polar-primary) 0%, var(--polar-secondary), 
+    var(--pets-a-glow) 100%);
+}
+section {
+    padding: 0.25rem;
+    margin-bottom: 2rem;
+}
 
 /* --- TYPOGRAPHY --- Headings - Roboto ExtraBold/Bold/Medium for hierarchy */
 h1, h2, h3, p, ul, li {
@@ -240,6 +241,13 @@ header {
     box-shadow: 0 0 15px var(--pets-s-glow), 0 0 30px var(--pets-s-glow);
 }
 
+.card-image-wrapper{
+    width: 100%;
+    height: clamp(200px, 30vw, 350px);
+    object-fit: cover;
+    border-radius: 7.5px;
+}
+
 /* Käytä vain kotisivulla */
 .index-card {
     max-width: 320px;
@@ -360,6 +368,7 @@ header {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
+    text-shadow: 0 2px 4px var(--pets-shadow);
 }
 .form-input {
     background-color: rgba(255, 255, 255, 0.1);
@@ -397,7 +406,7 @@ table {
     margin-bottom: 3rem;
     border-collapse: separate;
     border-spacing: 0;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
     overflow: hidden;
 }
 thead {
@@ -420,8 +429,8 @@ caption {
     font-size: 1rem;
     text-shadow: 0 2px 4px var(--pets-shadow);
     text-align: center;
+    border-radius: 5px 5px 0 0;
     caption-side: top;
-    
 }
 th,
 td {
@@ -552,6 +561,7 @@ tr :nth-child(2) {
 }
 
 .content-box {
+    display: grid;
     justify-items: center;
 }
 
