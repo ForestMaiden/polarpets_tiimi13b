@@ -350,7 +350,7 @@ header {
 .contact-form-container {
     background-color: var(--pets-mask);
     padding: 2rem;
-    border: 2px solid var(--pets-a-glow);
+    border: 4px solid var(--pets-a-glow);
     border-radius: 5px;
 }
 .form-group {
@@ -368,6 +368,7 @@ header {
     border: 2px solid transparent;
     border-radius: 5px;
     font-size: 1rem;
+    color: var(--polar-white);
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 .form-input:focus,
