@@ -296,6 +296,11 @@ header {
 .info-box p {
     margin-bottom: auto;
 }
+
+.info-box strong{
+    color: var(--pets-s-glow);
+}
+
 .info-box a {
     transition: all 0.3s ease;
     display: inline-block;              /* Necessary for transform to work */
