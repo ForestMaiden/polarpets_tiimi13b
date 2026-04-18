@@ -188,6 +188,7 @@ header {
 .btn-primary {
     background-color: var(--polar-accent);
     border: 3px solid transparent;
+    font-size: 18.5px;  /*testing if this passes WebAim's wave*/
     font-weight: 500;
     transition: background-color 0.3s ease;
 }

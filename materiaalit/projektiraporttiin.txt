@@ -56,12 +56,14 @@ Visuaalinen suunta: Aurora-inspiraatio, hieman pehmennetyt muodot.
 Lemmikkien hyvinvointi keskiössä (luotettava, ammattimainen, lämmin) – sivusto tuntuu 
 turvalliselta paikalta.
 
-- Päätimme toteuttaa pohjoisen taikaa huokuvan sivuston, koska Polar Pets ei halunnut 
-kliinistä vaikutelmaa.
-- Päätimme tavoitella modernin minimalistista ulkoasua, koska se luo käyttäjälle 
-turvallisuuden tuntua.
-- Päätimme käyttää samaa kapeaa & kiinteää navbar + alert kaikilla sivuillamme, 
-koska se helpottaa oleellisimman tiedon sekä CTA:n löytämistä nopeasti.
+- Päätimme toteuttaa pohjoisen taikaa huokuvan sivuston riittävän voimakkaalla kontrastilla, 
+mikä luo Polar Petsille erottuvan pohjoismaisen brändi-identiteetin säilyttäen 
+WCAG AAA -luettavuus tekstin varjostuksen ja taustan maskauksen avulla.
+- Päätimme käyttää kapeaa & kiinteää headeriä alertilla & CTA-painikkeella kaikilla sivuillamme, 
+varmistaaksemme kriittisen tiedon (päivystys, ajanvaraus) välittömän löydettävyyden koko 
+käyttäjäpolun ajan sivun syvyydestä tai vierityskohdasta riippumatta.
+- Päätimme käyttää kolmipalstaista palvelukorttien asettelua etusivulla, korostaaksemme 
+visuaalisesti oikean palvelun nopeaa löydettävyyttä (klinikka/hotelli/trimmaus).
 - Valitsimme fontiksi Roboton, koska se on helppolukuinen ja siististi mukautuva.
 - Päätimme käyttää sekä ikoineita että eläinkuvia, koska ne tukevat miellyttävää 
 käyttökokemusta.
@@ -74,7 +76,12 @@ parantavat löydettävyyttä.
 
 
 Tarkistimme saavutettavuuden ja responsiivisuuden osalta
--
+Kaikki sivustomme sivut on tarkistettu projektin edetessä useaan kertaan:
+- Lighthouse -työkalulla.
+- Silmämääräisesti usean eri selaimen dev toolsin mobiilinäkymää 360px -> käyttäen.
+Viimeinen tarkistus suoritettiin hyödyntäen:
+- https://wave.webaim.org/
+- ilman hiirtä (pelkällä näppäimistöllä) navigoiden läpi sivuston.
 
 
 Vertaisarvioinnin palaute tiimiltä 1 ja tekemämme muutokset
