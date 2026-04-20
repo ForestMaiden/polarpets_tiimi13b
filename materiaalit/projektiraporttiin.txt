@@ -83,12 +83,21 @@ Kaikki sivustomme sivut on tarkistettu projektin edetessä useaan kertaan:
 - Lighthouse -työkalulla.
 - Silmämääräisesti usean eri henkilön ja selaimen dev toolsin mobiilinäkymää 360px -> käyttäen.
 Viimeinen tarkistus suoritettiin hyödyntäen:
-- https://wave.webaim.org/
+- https://wave.webaim.org/ -> CTA:n kontrasti ei ole algoritmin mukaan riittävä (ei huomioi
+varjostusta lainkaan, joka parantaa kontrastia merkittävästi!)
 - ilman hiirtä (pelkällä näppäimistöllä) navigoiden läpi sivuston.
 
 
 Vertaisarvioinnin palaute tiimiltä 1 ja tekemämme muutokset
--
+- 19.4.2026. 10/12 OK. Kuvat ja alt-tekstit vielä puuttuivat. Linkkiteksteihin kontekstista selkeyttä.
+Kehitysehdotukset: 
+1) Source code hieman haastava luettava, kun CSS ei ole erillisenä.
+2) Lemmikkihotelli ja trimmaus sivujen asettelu ja kontrasti vaatisi hieman huomiota.
+- Muutimme etusivun palvelukorttien linkkitekstit "varaa" -> "tutustu/löydä".
+- Viimeistelimme sivuston 20.-22.4.2026. Lisäsimme lopulliset kuvat kuvaavine alt-teksteineen,
+varmistimme kontrastin ja layoutin responsiivisen toimivuuden kuvien kanssa.
+- CSS:n olisi voinut toteuttaa modulaarisena, mutta emme lähteneet pilkkomaan hyvin toimivaa 
+ja joustavaa kokonaisuutta aivan viimeisten päivien aikana.
 
 
 Miten tekoälyä käytettiin (mihin ja millä tavalla, 2-5 riviä)
@@ -116,8 +125,9 @@ Käyttäjätehtävät:
 1.	Löytää oikea palvelu nopeasti (eläinlääkäri vs. trimmaus vs. lemmikkihotelli).
 2.	Selvittää hinnat, aukioloajat ja päivystystiedot.
 3.	Siirtyä ajanvaraukseen tai lähettää yhteydenottopyyntö.
-Design-valinta: (1)
-Saavutettavuusvalinta: (1)
+Design-valinta: Loimme Polar Petsille sivuston kautta pohjoisen taikaa huokuvan brändi-identiteetin.
+Saavutettavuusvalinta: Varmistimme riittävän kontrastin sekä WCAG AAA -luettavuuden 
+tekstin varjostuksen ja taustan maskauksen avulla.
 
 --------------------------------------------------------------------------------------
 MUISTIINPANOT

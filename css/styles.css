@@ -41,7 +41,7 @@ body {
 
 section {
     padding: 0.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 /* --- TYPOGRAPHY --- Headings - Roboto ExtraBold/Bold/Medium for hierarchy */
@@ -238,6 +238,7 @@ header {
     object-fit: cover;
     display: block;
     margin-bottom: 2rem;
+    border-radius: 7.5px;
 }
 
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
