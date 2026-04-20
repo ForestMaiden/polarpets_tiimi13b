@@ -24,7 +24,7 @@ https://github.com/ForestMaiden/polarpets_tiimi13b/blob/main/materiaalit/tiimib_
 Sivukartta
 
 1.	Etusivu - index.html (hero, ajanvaraus CTA, päivystys, palvelukolmijako, asiakaspalaute)
-    2.	Eläinlääkäri - alinlaakari.html (vastaanotto, rokotukset, hammashoito, kirurgia, mikrosirut)
+    2.	Eläinlääkäri - elainlaakari.html (vastaanotto, rokotukset, hammashoito, kirurgia, mikrosirut)
     3.	Lemmikkihotelli - lemmikkihotelli.html (kodinomainen lemmikkihotelli)
     4.	Trimmaus - trimmaus.html (trimmaus ja päivähoito)
     5.	Hinnasto - hinnasto.html (suuntaa-antavat hinnat palveluittain)
@@ -41,6 +41,7 @@ Trello pääkäyttäjä ja HTML: Vilma Porvari
 
 Valittu työskentelymenetelmä ja miten sitä käytettiin
 
+Visuaalinen, WIP rajojen puitteissa vapaa sekä aktiivinen Kanban-menetelmä. 
 Kanban-taulu alkaa Backlogista (priorisoidaan järjestelemällä tärkeimmät ylös). 
 To Do:lle siirretään seuraavia tehtäviä. Doing näyttää mitä on työn alla. 
 Done sarakkeelle siirrämme palautus/julkaisu -valmiit tehtävät, jotka saavat vielä 
@@ -78,7 +79,7 @@ parantavat löydettävyyttä.
 Tarkistimme saavutettavuuden ja responsiivisuuden osalta
 Kaikki sivustomme sivut on tarkistettu projektin edetessä useaan kertaan:
 - Lighthouse -työkalulla.
-- Silmämääräisesti usean eri selaimen dev toolsin mobiilinäkymää 360px -> käyttäen.
+- Silmämääräisesti usean eri henkilön ja selaimen dev toolsin mobiilinäkymää 360px -> käyttäen.
 Viimeinen tarkistus suoritettiin hyödyntäen:
 - https://wave.webaim.org/
 - ilman hiirtä (pelkällä näppäimistöllä) navigoiden läpi sivuston.
@@ -89,9 +90,9 @@ Vertaisarvioinnin palaute tiimiltä 1 ja tekemämme muutokset
 
 
 Miten tekoälyä käytettiin (mihin ja millä tavalla, 2-5 riviä)
--
--
--
+- Kuvia tuotettiin (tekstistä sekä esimerkeistä) ja muokattiin pääasiassa Geminillä.
+- HTML, CSS ja sisältö tarkistettiin pääasiassa Claudella. 
+- Arvioimme itse mitkä AI:n luomukset ja ehdotukset muokkauksista olivat hyödyllisiä.
 
 
 ERILLISINÄ TIEDOSTOINA PALAUTETTAVAT:
@@ -102,7 +103,7 @@ grafiikka-aineisto (valmiit tiedostot + lyhyt selite)
 
 Poster / one-pager
 
-Julkaisu: https://forestmaiden.github.io/polarpets_tiimi13b/index.html
+Linkki sivustoon: https://forestmaiden.github.io/polarpets_tiimi13b/index.html
 
 kuvakaappaus etusivusta
 
