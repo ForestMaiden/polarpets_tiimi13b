@@ -72,8 +72,10 @@ käyttökokemusta.
 
 SEO ja AI-optimointi toimet
 - Huolehdimme otsikoiden, metadatan ja alt-tekstien hyvästä kuvailevuudesta, jotka
-parantavat löydettävyyttä.
--
+parantavat löydettävyyttä (hierarkia, semanttisuus & sisältö).
+- Sivustolla näytettävä sisältö ja UKK ovat hyvin kohdennettuja käyttäjilleen, 
+joten sopivia ja ajankohtaisia avainsanoja luonnollisten kysymys-vastaus -parien lisäksi 
+on paljon tarjolla. 
 
 
 Tarkistimme saavutettavuuden ja responsiivisuuden osalta
