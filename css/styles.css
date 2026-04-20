@@ -227,6 +227,16 @@ header {
     height: 72px;
     width: auto;
     color: var(--polar-secondary);
+    margin-bottom: 2rem;
+}
+
+.index-card img,
+.service-card img {
+    width: 100%;
+    height: 188px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 2rem;
 }
 
 /* Käytä: palveluiden esittely, henkilöprofiilit, käyttäjien suositukset, yms. */
@@ -255,9 +265,8 @@ header {
     transform: scale(1.025);
     box-shadow: 0 0 15px var(--polar-secondary), 0 0 30px var(--pets-s-glow);    
 }
-.index-card h3 {
+.index-card h2, h3 {
     text-align: center;
-    padding: 1.5rem;
 }
 .index-card p {
     text-align: center;
@@ -265,12 +274,6 @@ header {
 .index-card .btn-primary,
 .index-card .btn-secondary {
     margin-top: auto;
-}
-.index-card img {
-    width: 100%;
-    height: 188px;
-    object-fit: cover;
-    display: block;
 }
 
 .testimonial-card {
