@@ -37,6 +37,7 @@ body {
     background: linear-gradient(45deg, var(--polar-primary) 0%, var(--polar-secondary), 
     var(--pets-a-glow) 100%);
 }
+
 section {
     padding: 0.25rem;
     margin-bottom: 2rem;
@@ -686,7 +687,7 @@ tr :nth-child(2) {
     gap: 1.5rem;
 }
 
-@media (min-width: 460px) {
+@media (min-width: 768px) {
     .layout-four {
         grid-template-columns: repeat(2, 1fr);
     }
