@@ -654,6 +654,7 @@ tr :nth-child(2) {
 .layout-two-masonry {
     column-count: 1;
     column-gap: 2rem;
+    justify-items: center;
 }
 
 @media (min-width: 768px) {
@@ -667,6 +668,7 @@ tr :nth-child(2) {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    justify-items: center;
 }
 
 @media (min-width: 768px) {
@@ -692,7 +694,6 @@ tr :nth-child(2) {
 @media (min-width: 768px) {
     .layout-four {
         grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
     }
 }
 
