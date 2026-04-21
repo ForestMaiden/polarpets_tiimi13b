@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yhteystiedot - Polar Pets Tampere</title>
-    <meta name="description" content="Polar Petsin yhteystiedot, aukioloajat ja sijainti Tampereella. Päivystys 24/7 
-    numerossa 0600 123 45. Varaa aika tai lähetä yhteydenottopyyntö!">
+    <meta name="description" content="Polar Petsin ajanvarausjärjestelmä, josta löydät ajanvarauksen eläinlääkäriklinikalle,
+    lemmikkihotelliimme ja trimmaamoomme Tampereella.">
     <link rel="icon" type="image/svg+xml" href="../icons/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
     <header class="bootstrap-zone">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img src="../images/polarlogo_50px.png" alt="Polar Pets pyöreä tassulogo."> Polar Pets</a>
+                <a class="navbar-brand" href="../index.html"><img src="../images/polarlogo_50px.png" alt="Polar Pets pieni, pyöreä tassulogo.">Polar Pets</a>
                 <a href="ajanvaraus.html" class="btn btn-primary d-lg-none ms-auto me-2">Varaa aika</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                         data-bs-target="#navbarNav" aria-controls="navbarNav" 
@@ -46,25 +46,28 @@
         </div>
     </header>
 
-    <div class="site-grid">
-        <main class="content-area">
-
-            <section class="hero-section">
-                <div class="hero">
-                    <img src="../materiaalit/optimized-images/placeholderkuva.webp" alt="Muuta tämä teksti!">
-                    <div class="hero-text">
-                        <h1>Ajanvaraus</h1>
-                        <p>Täältä voit varata ajan niin eläinlääkäriin, trimmaukseen, kuin lemmikkihotelliin.</p>
-                    </div>    
-                </div>
-            </section>
-        </main>
-    </div>
+    <main class="site-grid">
+        <section class="hero-section">
+            <div class="hero">
+                <picture>
+                <source media="(min-width: 768px)" srcset="../images/1920x1080_orangecat2.webp">
+                <source media="(max-width: 767px)" srcset="../images/767_etusivu.webp">
+                <img src="../images/1920x1080_orangecat2.webp" 
+                alt="Lähikuva oranssista kissasta nukkumassa kyljellään ulkona kiiltävällä kivilattialla.">
+                </picture>
+                <div class="hero-text">
+                    <h1>Hups!</h1>
+                    <p>Ajanvarausjärjestelmä ei ole vielä käytössä</p>
+                    <a href="../index.html" class="btn-secondary">Takaisin etusivulle</a>
+                </div>    
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer-wrapper">
             <div class="footer-logo">
-                <img src="../images/polarlogo_200px.png" alt="Polar Pets pyöreä tassulogo.">
+                <img src="../images/polarlogo_200px.png" alt="Polar Pets iso, pyöreä tassulogo.">
             </div>
             <div class="footer-contact">
                 <h3>Yhteystiedot</h3>
