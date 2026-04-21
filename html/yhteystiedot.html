@@ -51,7 +51,12 @@
 
             <section class="hero-section">
                 <div class="hero">
-                    <img src="../images/1920x1080px_cucumberbunny.webp" alt="Harmaa pupu syö kurkkua ruohikolla auringonpaisteessa.">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="../images/1920x1080px_cucumberbunny.webp">
+                        <source media="(max-width: 767px)" srcset="../images/767px_yhteystiedot.webp">
+                        <img src="../images/1920x1080px_cucumberbunny.webp" 
+                        alt="Harmaa pupu syö kurkkua ruohikolla auringonpaisteessa.">
+                    </picture>
                     <div class="hero-text">
                         <h1>Yhteystiedot</h1>
                         <p>Löydät meidät Tampereen sydämestä hyvien kulkuyhteyksien varrelta. 

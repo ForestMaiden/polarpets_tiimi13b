@@ -613,7 +613,7 @@ tr :nth-child(2) {
 .hero-text p {
     font-size: clamp(0.9rem, 2vw, 1rem);
 }
-.hero-text .btn-primary {
+.hero-text .btn-secondary {
     margin-top: 1.5rem;
     font-size: 1rem;
 }

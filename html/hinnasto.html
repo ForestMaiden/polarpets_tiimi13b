@@ -48,7 +48,12 @@
         <main class="content-area">
             <section class="hero-section">
                 <div class="hero">
-                    <img src="../images/1920x1080_modattu_marsut.webp" alt="Kolme oranssinruskeaa marsua vierekkäin vaaleanpunaisella alustalla.">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="../images/1920x1080_modattu_marsut.webp">
+                        <source media="(max-width: 767px)" srcset="../images/767_hinnasto.webp">
+                        <img src="../images/1920x1080_modattu_marsut.webp" 
+                        alt="Kolme oranssinruskeaa marsua vierekkäin vaaleanpunaisella alustalla.">
+                    </picture>
                     <div class="hero-text">
                         <h1>Hinnasto</h1>
                         <p>Kaikki hinnat sisältävät alv:n. Toimenpidehintoihin lisätään klinikkamaksu 28 € sekä mahdolliset käytetyt lääkkeet ja tarvikkeet, ellei toisin mainita.
