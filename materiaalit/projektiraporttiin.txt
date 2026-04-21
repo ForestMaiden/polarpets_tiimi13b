@@ -89,8 +89,8 @@ varjostusta lainkaan, joka parantaa kontrastia merkittävästi!)
 
 
 Vertaisarvioinnin palaute tiimiltä 1 ja tekemämme muutokset
-- 19.4.2026. 10/12 OK. Kuvat ja alt-tekstit vielä puuttuivat. Linkkiteksteihin kontekstista selkeyttä.
-Kehitysehdotukset: 
+- 19.4.2026. Kokonaisuus on siisti ja toimivan oloinen, 10/12 OK. Kuvat ja alt-tekstit vielä 
+puuttuivat. Linkkiteksteihin kontekstista selkeyttä. Kehitysehdotukset: 
 1) Source code hieman haastava luettava, kun CSS ei ole erillisenä.
 2) Lemmikkihotelli ja trimmaus sivujen asettelu ja kontrasti vaatisi hieman huomiota.
 - Muutimme etusivun palvelukorttien linkkitekstit "varaa" -> "tutustu/löydä".
@@ -109,35 +109,7 @@ Miten tekoälyä käytettiin (mihin ja millä tavalla, 2-5 riviä)
 ERILLISINÄ TIEDOSTOINA PALAUTETTAVAT:
 tuntikirjanpito Excel
 grafiikka-aineisto (valmiit tiedostot + lyhyt selite)
-
--------------------------------------------------------------------------------------------
-
-Poster / one-pager
-
-Linkki sivustoon: https://forestmaiden.github.io/polarpets_tiimi13b/index.html
-
-kuvakaappaus etusivusta
-
-Kohdeyleisö: Lemmikkien omistajat (koirat, kissat ja pieneläimet), jotka etsivät 
-luotettavaa eläinlääkäripalvelua tai hoitopaikkaa sekä uudet lemmikinomistajat, 
-jotka tarvitsevat tietoa peruspalveluista (rokotukset, mikrosiru, sterilisaatio).
-Käyttäjätehtävät: 
-1.	Löytää oikea palvelu nopeasti (eläinlääkäri vs. trimmaus vs. lemmikkihotelli).
-2.	Selvittää hinnat, aukioloajat ja päivystystiedot.
-3.	Siirtyä ajanvaraukseen tai lähettää yhteydenottopyyntö.
-Design-valinta: Loimme Polar Petsille sivuston kautta pohjoisen taikaa huokuvan brändi-identiteetin.
-Saavutettavuusvalinta: Varmistimme riittävän kontrastin sekä WCAG AAA -luettavuuden 
-tekstin varjostuksen ja taustan maskauksen avulla.
-
---------------------------------------------------------------------------------------
-MUISTIINPANOT
-
-Visualinen ilme: 
-•	Revontulet, hillitty, modernin minimalistinen. 
-•	Värit ja niiden käyttö: 60 %, 30 % ja 10 % sivustolla + ripaus pohjoisen taikaa.
-•	Muodot: vähän pehmennetty.
-Luotettava, lämmin, eläinystävällinen. Ammattimainen mutta ei kliininen. Lemmikit ja niiden 
-hyvinvointi keskiössä – sivuston pitää tuntua turvalliselta paikalta.
+poster / one pager
 
 --------------------------------------------------------------------------------------
 

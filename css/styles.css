@@ -4,9 +4,6 @@
    professional, trustworthy
    ----------------------------------- */
 
-/* TODO: lisää tarvittavia elementtejä tai luokkia, tarkistus, hienosäätö 
-   VARMISTA: 360px kaikki pysyy kasassa! */
-
 
 /* --- CSS RESET --- */
 * {
@@ -78,7 +75,7 @@ ul {
     margin-bottom: 2rem;
 }
 a {
-    color: var(--polar-secondary);
+    color: var(--pets-s-glow);
     text-decoration: none;
 }
 
@@ -147,7 +144,7 @@ header {
 }
 .accordion-button:not(.collapsed) {
     background: var(--pets-mask);
-    color: var(--polar-secondary) !important;
+    color: var(--polar-white) !important;
     border-radius: 5px 5px 0 0;
 }
 /* The arrow icon */
@@ -524,6 +521,7 @@ tr :nth-child(2) {
 }
 .footer a {
     transition: all 0.3s ease;
+    color: var(--polar-secondary);
     display: inline-block; /* Necessary for transform to work */
 }
 .footer a:hover,
