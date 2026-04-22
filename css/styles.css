@@ -93,7 +93,7 @@ header {
 }
 .navbar-brand {
     font-family: "Stylish", Helvetica, Arial, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     font-style: normal;
     color: var(--polar-white) !important;
@@ -131,6 +131,7 @@ header {
 .accordion-button {
     background: var(--pets-mask);
     color: var(--polar-white) !important;
+    text-shadow: 0 2px 4px var(--pets-shadow);
     font-weight: 500;
     font-size: 1.125rem;
     padding: 1.25rem 3rem 1.25rem 1.5rem;
@@ -185,7 +186,7 @@ header {
 /* Käytä CTA:han (Varaa aika) */
 .btn-primary {
     background-color: var(--polar-accent);
-    border: 3px solid transparent;
+    border: 3px solid var(--pets-a-glow);
     font-weight: 500;
     transition: background-color 0.3s ease;
 }
@@ -225,7 +226,7 @@ header {
     height: 72px;
     width: auto;
     color: var(--polar-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .index-card img,
@@ -262,7 +263,7 @@ header {
 .index-card:hover,
 .index-card:focus {
     transform: scale(1.025);
-    box-shadow: 0 0 15px var(--polar-secondary), 0 0 30px var(--pets-s-glow);    
+    box-shadow: 0 0 15px var(--polar-secondary), 0 0 30px var(--pets-s-glow);
 }
 .index-card h2, h3 {
     text-align: center;
@@ -486,6 +487,7 @@ tr :nth-child(2) {
 
 .footer-logo {
     grid-area: logo;
+    padding: 1rem;
 }
 .footer-contact {
     grid-area: contact;
@@ -522,7 +524,7 @@ tr :nth-child(2) {
 .footer a {
     transition: all 0.3s ease;
     color: var(--polar-secondary);
-    display: inline-block; /* Necessary for transform to work */
+    display: inline-block;              /* Necessary for transform to work */
 }
 .footer a:hover,
 .footer a:focus {
@@ -575,7 +577,7 @@ tr :nth-child(2) {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 .hero {
     display: grid;
@@ -606,15 +608,13 @@ tr :nth-child(2) {
     background-color: var(--pets-mask);
     padding: 1.5rem 1rem;               /* Smaller padding on mobile */
     border-radius: 10px;
-    max-width: 700px;
+    max-width: 600px;
     margin: auto;                       /* Centers it vertically and horizontally */
 }
 .hero-text h1 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(2rem, 4vw, 2.5rem);
 }
-.hero-text p {
-    font-size: clamp(0.9rem, 2vw, 1rem);
-}
+
 .hero-text .btn-secondary {
     margin-top: 1.5rem;
     font-size: 1rem;
