@@ -1,0 +1,38 @@
+Tiimi 13 Päivittelijät alitiimi B: Laura Juvonen & Vilma Porvari
+
+Grafiikkaa on meiltä molemmilta.
+
+Laura: 
+- 2 svg ikonia (toothbrush & stethoscope) toteutettu hyödyntäen ChatGPT:tä
+- poster
+- paljon kuvia luotu Geminillä, myös itse Photopealla kropattuja 
+  (vain pieni osa valikoitui sivustolle)
+
+Vilma: 
+- Logo 2 koossa
+- favicon
+- wireframet
+- paljon kuvia luotu ja muokattu Geminillä sekä Photopealla 
+  (sivustolle valikoitujen kuvien lopullinen viimeistely)
+
+
+Muut käyttämämme ikonot:
+https://feathericons.com/ Made by @colebemis
+
+
+Muut käyttämämme kuvat: 
+
+License Free images from https://unsplash.com/:
+- Rafaëlla Waasdorp: a small white dog standing on top of a grass covered field.
+  https://unsplash.com/photos/a-small-white-dog-standing-on-top-of-a-grass-covered-field-H385siGOIQw
+- Photo by Ludemeula Fernandes (orange cat)
+- Photo by T.R Photography 📸 (UKK)
+- Photo by Joe Caione (dog running towards the camera)
+- Photo by Jaroslaw Slodkiewicz (guinea pigs)
+- Photo by Jamie Street (orange dog)
+
+Pexels.com:
+- Tima Miroshnichenko: A wet dog covered with towel
+  https://www.pexels.com/photo/a-wet-dog-covered-with-towel-6131158/
+- Ron Lach: Man brushing dogs hair
+  https://www.pexels.com/photo/man-brushing-dogs-hair-9986355/
